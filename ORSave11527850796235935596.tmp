@@ -58,6 +58,11 @@ Mass verified with data sheet, including casing and foam protection</comment>
                 <appearance>
                 <paint red="1" green="1" blue="1" alpha="255"/>
                 <shine>0.0</shine>
+                <decal name="decals/wadding.png" rotation="0.0" edgemode="REPEAT">
+                <center x="0.0" y="0.0"/>
+                <offset x="0.0" y="0.0"/>
+                <scale x="1.0" y="1.0"/>
+                </decal>
                 </appearance>
                 <axialoffset method="absolute">0.239</axialoffset>
                 <comment>Holds avionics PNUT in place using dowel and 3D printed support
