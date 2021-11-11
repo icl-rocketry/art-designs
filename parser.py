@@ -6,15 +6,25 @@ root = tree.getroot()
 rocket = root[0]
 sims = root[1]
 
-for child in rocket:
-    print(child.tag)
+# for child in rocket:
+#     print(child.tag)
 
 for element in rocket.iter('motorconfiguration'):
     motor = element[0].text
 
 length = 0
-for element in rocket.iter('length'):
-    length = length + float(element.text)
+
+
+
 
 print(motor)
-print(length)
+
+
+apogee = sims[0].find('flightdata').attrib['maxaltitude']
+maxvel = apogee = sims[0].find('flightdata').attrib['maxvelocity']
+maxacc = sims[0].find('flightdata').attrib['maxacceleration']
+flightdur = sims[0].find('flightdata').attrib['flighttime']
+groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
+
+# other extractable params - max mach, time to apogee, launch rod vel, deployment vel
+# see raw xml to get attrib keys
