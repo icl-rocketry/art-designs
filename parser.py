@@ -22,14 +22,17 @@ for element in rocket.iter('overridemass'):
 for element in rocket.iter('mass'):
     mass = mass + float(element.text)
 
-
+mass = round(mass, 3) # we can only measure to nearest gram anyway
 
 # extract simulation data
 apogee = sims[0].find('flightdata').attrib['maxaltitude']
-maxvel = apogee = sims[0].find('flightdata').attrib['maxvelocity']
+maxvel = sims[0].find('flightdata').attrib['maxvelocity']
 maxacc = sims[0].find('flightdata').attrib['maxacceleration']
 flightdur = sims[0].find('flightdata').attrib['flighttime']
 groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
 
 # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
 # see raw xml to get attrib keys
+
+
+
