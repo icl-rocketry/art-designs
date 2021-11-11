@@ -35,4 +35,12 @@ groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
 # see raw xml to get attrib keys
 
 
+# pretty print data
 
+print(f"Motor selected for use: {motor}")
+print(f"Apogee: {apogee}m")
+print(f"Max speed: {maxvel}m/s")
+print(f"Max acceleration: {maxacc}m/s^2")
+print(f"Flight duration: {flightdur}s")
+print(f"Ground hit velocity: {groundhit} m/s")
+print(f"Wet mass: {mass}kg")
