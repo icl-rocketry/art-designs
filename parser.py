@@ -12,23 +12,32 @@ def headlines(design = "APEX"):
     sims = root[1]
 
     # get motor
-    for element in rocket.iter('motorconfiguration'):
-        motor = element[0].text
+    try:
+        for element in rocket.iter('motorconfiguration'):
+            motor = element[0].text
+    except:
+        motor = "No motor found"
 
     # sum mass components
-    mass = 0
-    for element in rocket.iter('overridemass'):
-        mass = mass + float(element.text)
-    for element in rocket.iter('mass'):
-        mass = mass + float(element.text)
-    mass = round(mass, 3) # we can only measure to nearest gram anyway
+    try:
+        mass = 0
+        for element in rocket.iter('overridemass'):
+            mass = mass + float(element.text)
+        for element in rocket.iter('mass'):
+            mass = mass + float(element.text)
+        mass = round(mass, 3) # we can only measure to nearest gram anyway
+    except:
+        mass = "Mass calculation not available"
 
     # extract simulation data
-    apogee = sims[0].find('flightdata').attrib['maxaltitude']
-    maxvel = sims[0].find('flightdata').attrib['maxvelocity']
-    maxacc = sims[0].find('flightdata').attrib['maxacceleration']
-    flightdur = sims[0].find('flightdata').attrib['flighttime']
-    groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
+    try:
+        apogee = sims[0].find('flightdata').attrib['maxaltitude']
+        maxvel = sims[0].find('flightdata').attrib['maxvelocity']
+        maxacc = sims[0].find('flightdata').attrib['maxacceleration']
+        flightdur = sims[0].find('flightdata').attrib['flighttime']
+        groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
+    except:
+        apogee, maxvel, maxacc, flightdur, groundhit = "Error parsing simulation data"
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
     # see raw xml to get attrib keys
 
@@ -71,11 +80,11 @@ def update_readme(design = "APEX"):
     print(readme)
 
     # write new readme
-    with open("README.md", 'w') as file:
-        file.write(readme)    
+    # with open("README.md", 'w') as file:
+    #     file.write(readme)    
 
 
 apex = headlines("APEX")
 # print (apex)
 
-update_readme("APEX")
+update_readme("ASCENSION")
