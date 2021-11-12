@@ -1,6 +1,6 @@
 # using basic template
 # and https://github.com/eugeneyan/eugeneyan/blob/master/.github/workflows/build.yml
-name: Update README when design is updated
+name: README Update
 
 # Controls when the workflow will run
 on:
