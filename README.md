@@ -4,6 +4,8 @@ OpenRocket simulations version control
 **.ork files MUST be unzipped to merge**
 **closedrocket MUST be used to make changes to avoid compatibility errors**
 
+[![README Updated](https://github.com/icl-rocketry/art-designs/actions/workflows/readme_updater.yml/badge.svg)](https://github.com/icl-rocketry/art-designs/actions/workflows/readme_updater.yml)
+
 ## ASTRA
 ART's first rocket flight!
 

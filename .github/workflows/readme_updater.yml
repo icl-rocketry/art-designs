@@ -5,8 +5,9 @@ name: Update README when design is updated
 # Controls when the workflow will run
 on:
   # trigger on push to any branch or manually
-  push:
   workflow_dispatch:
+  push:
+  
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
