@@ -41,7 +41,7 @@ jobs:
       run: |-
         python3 parser.py
 
-      - name: Setup git
+      - name: Setup git on container
       run: |-
         git config --global user.email "action@github.com"
         git config --global user.name "README-bot"
