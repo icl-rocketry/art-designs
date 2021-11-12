@@ -1,17 +1,12 @@
-# This is a basic workflow to help you get started with Actions
-
 # using basic template
 # and https://github.com/eugeneyan/eugeneyan/blob/master/.github/workflows/build.yml
-
 name: Update README when design is updated
 
 # Controls when the workflow will run
 on:
   # trigger on push to any branch or manually
-  push:
-    paths:
-      - '**.ork'
-  workflow_dispatch:
+  push
+  workflow_dispatch
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
