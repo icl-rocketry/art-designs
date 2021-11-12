@@ -45,7 +45,34 @@ def headlines(design = "APEX"):
 
     return summary
 
-   
+def update_readme(design = "APEX"):
+    # get data to update
+    summary = headlines(design)
+    # print(summary)
+    # initialise markers
+    start = f"<!-- {design} Info Start -->"
+    end = f"<!-- {design} Info End -->"
+
+    # read existing info 
+    with open("README.md", 'r') as file:
+        readme = file.read()
+
+    # get marker location
+    startin = readme.find(start) + len(start)
+    endin = readme.find(end)
+
+    # get info box from full file
+    box = readme[startin:endin]
+    box = box.strip()
+    print(box)
+    
+    # replace existing info with updated
+    readme = readme.replace(box, summary)
+    print(readme)
+
+    # write new readme
+    with open("README.md", 'w') as file:
+        file.write(readme)    
 
 
 apex = headlines("APEX")
