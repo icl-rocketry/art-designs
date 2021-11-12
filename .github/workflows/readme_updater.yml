@@ -34,8 +34,8 @@ jobs:
         architecture: x64
       # parser script has no dependencies
       # create requirements.txt and uncomment if that changes
-      - name: Install dependencies
-      run: python -m pip install -r requirements.txt
+      #- name: Install dependencies
+      #run: python -m pip install -r requirements.txt
 
       - name: Update README
       run: |-
@@ -43,4 +43,6 @@ jobs:
 
       - name: Setup git
       run: |-
+        git config --global user.email "action@github.com"
+        git config --global user.name "README-bot"
 
