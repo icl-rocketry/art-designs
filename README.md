@@ -34,6 +34,12 @@ ART's even higher record attempt
 
 L-class motor, apogee ~ 5890m (record: 5716m)
 
+<!-- ASCENSION Info Start -->
+
+Placeholder Info
+
+<!-- ASCENSION Info End -->
+
 ## Rockets that flew
 Unchanged OpenRocket files of rockets that have flown.
 
