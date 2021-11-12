@@ -1,46 +1,48 @@
 import xml.etree.ElementTree as ET
 
-# parse ork file
-tree = ET.parse("APEX.ork")
-root = tree.getroot()
+def headlines(design = "APEX"):
+    # parse ork file
+    fname = design + ".ork"
+    tree = ET.parse(fname)
+    root = tree.getroot()
 
-# split into physical attributes and simulation results
-rocket = root[0]
-sims = root[1]
+    # split into physical attributes and simulation results
+    rocket = root[0]
+    sims = root[1]
 
+    # get motor
+    for element in rocket.iter('motorconfiguration'):
+        motor = element[0].text
 
-# get motor
-for element in rocket.iter('motorconfiguration'):
-    motor = element[0].text
+    # sum mass components
+    mass = 0
+    for element in rocket.iter('overridemass'):
+        mass = mass + float(element.text)
+    for element in rocket.iter('mass'):
+        mass = mass + float(element.text)
+    mass = round(mass, 3) # we can only measure to nearest gram anyway
 
-# sum mass components
-mass = 0
+    # extract simulation data
+    apogee = sims[0].find('flightdata').attrib['maxaltitude']
+    maxvel = sims[0].find('flightdata').attrib['maxvelocity']
+    maxacc = sims[0].find('flightdata').attrib['maxacceleration']
+    flightdur = sims[0].find('flightdata').attrib['flighttime']
+    groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
+    # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
+    # see raw xml to get attrib keys
 
-for element in rocket.iter('overridemass'):
-    mass = mass + float(element.text)
+    # pretty print data
+    summary = str()
 
-for element in rocket.iter('mass'):
-    mass = mass + float(element.text)
+    summary += f"Motor selected for use: {motor} \n"
+    summary += f"Apogee: {apogee} m \n"
+    summary += f"Max speed: {maxvel} m/s \n"
+    summary += f"Max acceleration: {maxacc} m/s^2 \n"
+    summary += f"Flight duration: {flightdur} s \n"
+    summary += f"Ground hit velocity: {groundhit} m/s \n"
+    summary += f"Dry mass: {mass} kg"
 
-mass = round(mass, 3) # we can only measure to nearest gram anyway
+    return summary
 
-# extract simulation data
-apogee = sims[0].find('flightdata').attrib['maxaltitude']
-maxvel = sims[0].find('flightdata').attrib['maxvelocity']
-maxacc = sims[0].find('flightdata').attrib['maxacceleration']
-flightdur = sims[0].find('flightdata').attrib['flighttime']
-groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
-
-# other extractable params - max mach, time to apogee, launch rod vel, deployment vel
-# see raw xml to get attrib keys
-
-
-# pretty print data
-
-print(f"Motor selected for use: {motor}")
-print(f"Apogee: {apogee} m")
-print(f"Max speed: {maxvel} m/s")
-print(f"Max acceleration: {maxacc} m/s^2")
-print(f"Flight duration: {flightdur} s")
-print(f"Ground hit velocity: {groundhit} m/s")
-print(f"Dry mass: {mass} kg")
+apex = headlines("APEX")
+print (apex)
