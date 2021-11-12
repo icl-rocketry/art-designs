@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
-
+import os
+import subprocess
 
 def headlines(design = "APEX"):
     # parse ork file
@@ -100,6 +101,15 @@ def update_readme(design = "APEX"):
     with open("README.md", 'w') as file:
         file.write(readme)    
 
+def create_commit(design = "APEX"):
+    # create new readme
+    #update_readme(design)
 
-update_readme("APEX")
-update_readme("ASCENSION")
+    # get previous commit info
+    hash = subprocess.run("git log -1 --pretty=format:\"%h\"", stdout=subprocess.PIPE).stdout.decode('utf-8')
+    print(hash)
+
+#update_readme("APEX")
+#update_readme("ASCENSION")
+
+create_commit("APEX")
