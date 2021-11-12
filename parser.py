@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as ET
-import os
 import subprocess
 
 def headlines(design = "APEX"):
@@ -107,7 +106,12 @@ def create_commit(design = "APEX"):
 
     # get previous commit info
     hash = subprocess.run("git log -1 --pretty=format:\"%h\"", stdout=subprocess.PIPE).stdout.decode('utf-8')
-    print(hash)
+    author = subprocess.run("git log -1 --pretty=format:\"%an\"", stdout=subprocess.PIPE).stdout.decode('utf-8')
+    
+    # create commit info
+    info = f"README updated after commit {hash} by {author}"
+    print(info)
+    
 
 #update_readme("APEX")
 #update_readme("ASCENSION")
