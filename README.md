@@ -25,13 +25,7 @@ Flights:
 
 <!-- APEX Info Start -->
 
-**Motor** selected for use: APEX | Cesaroni I216-CL(I)-14 
-**Apogee:** 2881.3 m 
-**Max speed:** 364.86 m/s 
-**Max acceleration:** 211.76 m/s^2 
-**Flight duration:** 131.3 s 
-**Ground hit velocity:** 6.5301 m/s 
-**Dry mass:** 1.084 kg
+**Motor selected for use:** APEX | Cesaroni I216-CL(I)-14 <br/>**Apogee:** 2881.3 m <br/>**Max speed:** 364.86 m/s <br/>**Max acceleration:** 211.76 m/s^2 <br/>**Flight duration:** 131.3 s <br/>**Ground hit velocity:** 6.5301 m/s <br/>**Dry mass:** 1.084 kg 
 
 <!-- APEX Info End -->
 
@@ -42,13 +36,7 @@ L-class motor, apogee ~ 5890m (record: 5716m)
 
 <!-- ASCENSION Info Start -->
 
-**Motor** selected for use: No motor found 
-**Apogee:** 5747.8 m 
-**Max speed:** 612.43 m/s 
-**Max acceleration:** 239.58 m/s^2 
-**Flight duration:** 28.49 s 
-**Ground hit velocity:** Error parsing simulation data m/s 
-**Dry mass:** 0.2 kg
+**Motor selected for use:** No motor found <br/>**Apogee:** 5747.8 m <br/>**Max speed:** 612.43 m/s <br/>**Max acceleration:** 239.58 m/s^2 <br/>**Flight duration:** 28.49 s <br/>**Ground hit velocity:** Error parsing simulation data m/s <br/>**Dry mass:** 0.2 kg 
 
 <!-- ASCENSION Info End -->
 
