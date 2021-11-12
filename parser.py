@@ -31,13 +31,30 @@ def headlines(design = "APEX"):
 
     # extract simulation data
     try:
-        apogee = sims[0].find('flightdata').attrib['maxaltitude']
+        apogee = sims[0].find('flightdata').attrib['maxaltitude']        
+    except:
+        apogee = "Error parsing simulation data"
+
+    try:
         maxvel = sims[0].find('flightdata').attrib['maxvelocity']
+    except:
+        maxvel = "Error parsing simulation data"
+
+    try:
         maxacc = sims[0].find('flightdata').attrib['maxacceleration']
+    except:
+        maxacc = "Error parsing simulation data"
+
+    try:
         flightdur = sims[0].find('flightdata').attrib['flighttime']
+    except:
+        flightdur = "Error parsing simulation data"
+
+    try:
         groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
     except:
-        apogee, maxvel, maxacc, flightdur, groundhit = "Error parsing simulation data"
+        groundhit = "Error parsing simulation data"
+        
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
     # see raw xml to get attrib keys
 
