@@ -62,12 +62,12 @@ def headlines(design = "APEX"):
     # pretty print data
     summary = str()
 
-    summary += f"**Motor selected for use:** {motor} <br/>"
-    summary += f"**Apogee:** {apogee} m <br/>"
-    summary += f"**Max speed:** {maxvel} m/s <br/>"
-    summary += f"**Max acceleration:** {maxacc} m/s^2 <br/>"
-    summary += f"**Flight duration:** {flightdur} s <br/>"
-    summary += f"**Ground hit velocity:** {groundhit} m/s <br/>"
+    summary += f"**Motor selected for use:** {motor} <br/> \n"
+    summary += f"**Apogee:** {apogee} m <br/> \n"
+    summary += f"**Max speed:** {maxvel} m/s <br/> \n"
+    summary += f"**Max acceleration:** {maxacc} m/s^2 <br/> \n"
+    summary += f"**Flight duration:** {flightdur} s <br/> \n"
+    summary += f"**Ground hit velocity:** {groundhit} m/s <br/> \n"
     summary += f"**Dry mass:** {mass} kg "
 
     return summary
