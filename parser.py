@@ -74,11 +74,11 @@ def headlines(design = "APEX"):
 def update_readme(design = "APEX"):
     # get data to update
     summary = headlines(design)
-    print(summary)
+    # print(summary)
     # initialise markers
     start = f"<!-- {design} Info Start -->"
     end = f"<!-- {design} Info End -->"
-    print(start)
+    # print(start)
     # read existing info 
     with open("README.md", 'r') as file:
         readme = file.read()
@@ -90,16 +90,16 @@ def update_readme(design = "APEX"):
     # get info box from full file
     box = readme[startin:endin]
     box = box.strip()
-    print(box)
+    # print(box)
     
     # replace existing info with updated
     readme = readme.replace(box, summary)
     # print(readme)
 
     # write new readme
-    # with open("README.md", 'w') as file:
-    #     file.write(readme)    
+    with open("README.md", 'w') as file:
+        file.write(readme)    
 
 
 update_readme("APEX")
-# update_readme("ASCENSION")
+update_readme("ASCENSION")
