@@ -54,7 +54,7 @@ def headlines(design = "APEX"):
         groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
     except:
         groundhit = "Error parsing simulation data"
-        
+
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
     # see raw xml to get attrib keys
 
@@ -97,11 +97,9 @@ def update_readme(design = "APEX"):
     print(readme)
 
     # write new readme
-    # with open("README.md", 'w') as file:
-    #     file.write(readme)    
+    with open("README.md", 'w') as file:
+        file.write(readme)    
 
 
-apex = headlines("APEX")
-# print (apex)
-
+update_readme("APEX")
 update_readme("ASCENSION")
