@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 
+
 def headlines(design = "APEX"):
     # parse ork file
     fname = design + ".ork"
@@ -34,15 +35,20 @@ def headlines(design = "APEX"):
     # pretty print data
     summary = str()
 
-    summary += f"Motor selected for use: {motor} \n"
-    summary += f"Apogee: {apogee} m \n"
-    summary += f"Max speed: {maxvel} m/s \n"
-    summary += f"Max acceleration: {maxacc} m/s^2 \n"
-    summary += f"Flight duration: {flightdur} s \n"
-    summary += f"Ground hit velocity: {groundhit} m/s \n"
-    summary += f"Dry mass: {mass} kg"
+    summary += f"**Motor** selected for use: {motor} \n"
+    summary += f"**Apogee:** {apogee} m \n"
+    summary += f"**Max speed:** {maxvel} m/s \n"
+    summary += f"**Max acceleration:** {maxacc} m/s^2 \n"
+    summary += f"**Flight duration:** {flightdur} s \n"
+    summary += f"**Ground hit velocity:** {groundhit} m/s \n"
+    summary += f"**Dry mass:** {mass} kg"
 
     return summary
 
+   
+
+
 apex = headlines("APEX")
-print (apex)
+# print (apex)
+
+update_readme("APEX")
