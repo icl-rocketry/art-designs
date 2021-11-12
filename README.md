@@ -25,7 +25,7 @@ Flights:
 
 <!-- APEX Info Start -->
 
-Placeholder Info
+APEX Placeholder Info
 
 <!-- APEX Info End -->
 
@@ -36,7 +36,7 @@ L-class motor, apogee ~ 5890m (record: 5716m)
 
 <!-- ASCENSION Info Start -->
 
-Placeholder Info
+ASCENSION Placeholder Info
 
 <!-- ASCENSION Info End -->
 
