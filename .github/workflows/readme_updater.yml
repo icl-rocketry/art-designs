@@ -9,6 +9,8 @@ name: Update README when design is updated
 on:
   # trigger on push to any branch or manually
   push:
+    paths:
+      - '**.ork'
   workflow_dispatch:
 
 
@@ -38,4 +40,7 @@ jobs:
       - name: Update README
       run: |-
         python3 parser.py
+
+      - name: Setup git
+      run: |-
 
