@@ -14,6 +14,7 @@ Flights:
 2) Sunday 13th June 2021; 523m apogee. Mostly successful
 
 ## APEX
+
 ART's first record attempt
 
 I-class motor; apogee ~2850m (record: 2804m)
@@ -21,6 +22,10 @@ I-class motor; apogee ~2850m (record: 2804m)
 Flights:
 1) Sunday 29th August 2021; **Scrubbed**. Avionics failure
 2) Rescheduling soon...
+
+<!-- APEX Info Start -->
+
+<!-- APEX Info End -->
 
 ## ASCENSION
 ART's even higher record attempt
