@@ -105,8 +105,8 @@ def create_commit(design = "APEX"):
     #update_readme(design)
 
     # get previous commit info
-    hash = subprocess.run("git log -1 --pretty=format:\"%h\"", stdout=subprocess.PIPE).stdout.decode('utf-8')
-    author = subprocess.run("git log -1 --pretty=format:\"%an\"", stdout=subprocess.PIPE).stdout.decode('utf-8')
+    hash = subprocess.run("git log -1 --pretty=format:\"%h\"", stdout=subprocess.PIPE, shell=True).stdout.decode('utf-8')
+    author = subprocess.run("git log -1 --pretty=format:\"%an\"", stdout=subprocess.PIPE, shell=True).stdout.decode('utf-8')
     
     # create commit info
     info = f"README updated after commit {hash} by {author}"
