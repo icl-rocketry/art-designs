@@ -1,24 +1,24 @@
 # OpenRocket
 OpenRocket simulations version control
 
-**.ork files MUST be unzipped to merge** <br/>
-**closedrocket MUST be used to make changes to avoid compatibility errors**
+**All ork files must be unzipped to merge if using OpenRocket**
+**[closedrocket](https://github.com/icl-art/closedrocket) MUST be used to make changes to avoid compatibility errors**
 
 [![README Updated](https://github.com/icl-rocketry/art-designs/actions/workflows/readme_updater.yml/badge.svg)](https://github.com/icl-rocketry/art-designs/actions/workflows/readme_updater.yml)
 
 ## ASTRA
 
-ART's family of testbed rockets
+ART's family of testbed rockets, used to demonstrate systems used on record attempts.
 
 ### ASTRA Mk 1
-    ART's first rocket flight!
-    G-Class motor, testing LENNY and APEX Components.
-    Flight on Sunday 11th April 2021 at MRC; 546m apogee. RUD upon landing.
+ART's first rocket flight!
+G-Class motor, testing LENNY and APEX Components.
+Flight on Sunday 11th April 2021 at MRC; 546m apogee. RUD upon landing.
 
 ### ASTRA Mk 2
-    ART's second flight, demonstrating APEX Recovery systems
-    G-Class motor
-    Flight on Sunday 13th June 2021 at MRC; 523m apogee. Mostly successful
+ART's second flight, demonstrating APEX Recovery systems
+G-Class motor
+Flight on Sunday 13th June 2021 at MRC; 523m apogee. Mostly successful.
 
 ## APEX
 
