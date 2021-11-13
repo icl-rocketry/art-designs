@@ -431,7 +431,7 @@ Mass changed 164-&gt;182g 28/08</comment>
                     <designation>I216</designation>
                     <diameter>0.038</diameter>
                     <length>0.367</length>
-                    <delay>5.0</delay>
+                    <delay>14.0</delay>
                   </motor>
                   <ignitionconfiguration configid="d11988e2-2f05-4976-958a-c534de073028">
                     <ignitionevent>automatic</ignitionevent>
