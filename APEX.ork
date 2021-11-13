@@ -72,19 +72,23 @@ Mass verified from component used for ASTRA</comment>
                 <shine>0.0</shine>
                 </appearance>
                 <axialoffset method="absolute">0.2</axialoffset>
+                <overridemass>0.0</overridemass>
+                <overridesubcomponents>false</overridesubcomponents>
                 <comment>Holds avionics PNUT in place using dowel and 3D printed support
 Mass small - likely ~2g</comment>
                 <packedlength>0.01</packedlength>
                 <packedradius>0.0175</packedradius>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <mass>0.002</mass>
+                <mass>0.0</mass>
                 <masscomponenttype>payload</masscomponenttype>
               </masscomponent>
 
               <masscomponent>
                 <name>Liquid Gravity ⬆✓✓</name>
                 <axialoffset method="top">0.030999999999999996</axialoffset>
+                <overridemass>0.0</overridemass>
+                <overridesubcomponents>false</overridesubcomponents>
                 <comment>Mass optimised along with fin size
 
 ⚠ Review 28/08</comment>
@@ -92,7 +96,7 @@ Mass small - likely ~2g</comment>
                 <packedradius>0.0025</packedradius>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <mass>0.04</mass>
+                <mass>0.0</mass>
                 <masscomponenttype>masscomponent</masscomponenttype>
               </masscomponent>
             </subcomponents>
@@ -431,7 +435,7 @@ Mass changed 164-&gt;182g 28/08</comment>
                     <designation>I216</designation>
                     <diameter>0.038</diameter>
                     <length>0.367</length>
-                    <delay>5.0</delay>
+                    <delay>14.0</delay>
                   </motor>
                   <ignitionconfiguration configid="d11988e2-2f05-4976-958a-c534de073028">
                     <ignitionevent>automatic</ignitionevent>
@@ -584,7 +588,7 @@ Verified</comment>
   </rocket>
 
   <simulations>
-    <simulation status="cantrun">
+    <simulation status="uptodate">
       <name>APEX</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -602,8 +606,8 @@ Verified</comment>
         <atmosphere model="isa"/>
         <timestep>0.05</timestep>
       </conditions>
-      <flightdata maxaltitude="2881.3" maxvelocity="364.86" maxacceleration="211.76" maxmach="1.0786" timetoapogee="20.597" flighttime="131.3" groundhitvelocity="6.5301" launchrodvelocity="34.994" deploymentvelocity="36.316">
-        <warning>Recovery device deployment at high speed (45.9 m/s)</warning>
+      <flightdata maxaltitude="2875.1" maxvelocity="364.46" maxacceleration="211.58" maxmach="1.0774" timetoapogee="20.351" flighttime="20.453" launchrodvelocity="34.928" deploymentvelocity="46.212">
+        <warning>Recovery device deployment at high speed (46.2 m/s)</warning>
       </flightdata>
     </simulation>
 
