@@ -69,6 +69,8 @@ def headlines(design = "APEX"):
     summary += f"**Ground hit velocity:** {groundhit} m/s <br/> \n"
     summary += f"**Dry mass:** {mass} kg "
 
+    print(summary)
+
     return summary
 
 def update_readme(design = "APEX"):
@@ -102,7 +104,7 @@ def update_readme(design = "APEX"):
 
 def create_commit(design = "APEX"):
     # create new readme
-    #update_readme(design)
+    update_readme(design)
 
     # get previous commit info
     hash = subprocess.run("git log -1 --pretty=format:\"%h\"", stdout=subprocess.PIPE, shell=True).stdout.decode('utf-8')
@@ -115,5 +117,7 @@ def create_commit(design = "APEX"):
     subprocess.run(f"git commit -a -m \"{info}\"", shell=True)
     subprocess.run("git push origin HEAD", shell=True)
     
+# update_readme()
+
 create_commit("APEX")
 create_commit("ASCENSION")
