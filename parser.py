@@ -25,24 +25,15 @@ def headlines(design = "APEX"):
         motor = element[0].text
 
     # sum mass components
-    '''try:
-        mass = 0
-        for element in rocket.iter('overridemass'):
-            mass += float(element.text)
-        for element in rocket.iter('mass'):
-            mass += float(element.text)
-        mass = round(mass, 3) # we can only measure to nearest gram anyway
-    except:
-        mass = "Mass calculation not available" '''
 
     mass = 0
-    el1 = rocket.iter('overridemass')
-    if (el1 != []): 
-        mass += float(el1.text)
-    el1 = rocket.iter('mass')
-    if (el1 != []):
-        mass += float(el1.text)
+    for elementkey in [rocket.iter('overridemass'),rocket.iter('mass')]:
+        for element in elementkey:
+            mass += float(element.text)
     mass = round(mass, 3) # we can only measure to nearest gram anyway
+    if mass == 0 :
+        mass = "mass not found"
+    
 
     # extract simulation data
     apogee    = simdata (sims,'flightdata','maxaltitude')
