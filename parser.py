@@ -1,4 +1,3 @@
-from abc import abstractproperty
 import xml.etree.ElementTree as ET
 import subprocess
 
@@ -17,17 +16,16 @@ def headlines(design = "APEX"):
             res = rootObj[0].find(dataset).attrib[att]
         except: 
             res = "Error parsing simulation/rocket data"
+        return res 
     
-
     # get motor
-    try:
-        for element in rocket.iter('motorconfiguration'):
-            motor = element[0].text
-    except:
-        motor = "No motor found"
+    motor   = "motor not found"
+    element = rocket.iter('motorconfiguration')
+    if (element != []):
+        motor = element[0].text
 
     # sum mass components
-    try:
+    '''try:
         mass = 0
         for element in rocket.iter('overridemass'):
             mass += float(element.text)
@@ -35,7 +33,16 @@ def headlines(design = "APEX"):
             mass += float(element.text)
         mass = round(mass, 3) # we can only measure to nearest gram anyway
     except:
-        mass = "Mass calculation not available"
+        mass = "Mass calculation not available" '''
+
+    mass = 0
+    el1 = rocket.iter('overridemass')
+    if (el1 != []): 
+        mass += float(el1.text)
+    el1 = rocket.iter('mass')
+    if (el1 != []):
+        mass += float(el1.text)
+    mass = round(mass, 3) # we can only measure to nearest gram anyway
 
     # extract simulation data
     apogee    = simdata (sims,'flightdata','maxaltitude')
@@ -52,7 +59,6 @@ def headlines(design = "APEX"):
     # pretty print data
     sumlist = [f"**Motor selected for use:** {motor} <br/> \n", f"**Apogee:** {apogee} m <br/> \n", f"**Max speed:** {maxvel} m/s <br/> \n", f"**Max acceleration:** {maxacc} m/s^2 <br/> \n", f"**Flight duration:** {flightdur} s <br/> \n", f"**Ground hit velocity:** {groundhit} m/s <br/> \n", f"**Dry mass:** {mass} kg "]
     summary = sumlist.join('')
-
     return summary
 
 def update_readme(design = "APEX"):
