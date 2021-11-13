@@ -111,8 +111,8 @@ def create_commit(design = "APEX"):
     # create commit info
     info = f"README updated after commit {hash} by {author}"
     print(info)
-
-    subprocess.run(f"git commit -am \"{info}\"", shell=True)
+    
+    subprocess.run(f"git commit -a -m \"{info}\"", shell=True)
     subprocess.run("git push origin HEAD", shell=True)
     
 create_commit("APEX")
