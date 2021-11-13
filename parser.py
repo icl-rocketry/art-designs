@@ -10,7 +10,14 @@ def headlines(design = "APEX"):
 
     # split into physical attributes and simulation results
     rocket = root[0]
-    sims = root[1]
+    sims   = root[1]
+
+    def simdata(rootObj,dataset,att):
+        try:
+            res = rootObj[0].find(dataset).attrib[att]
+        except: 
+            res = "Error parsing simulation/rocket data"
+    
 
     # get motor
     try:
@@ -31,31 +38,20 @@ def headlines(design = "APEX"):
         mass = "Mass calculation not available"
 
     # extract simulation data
-    def simdata(dataset,att):
-        try:
-            res = sims[0].find(dataset).attrib[att]
-        except: 
-            res = "Error parsing simulation data"
-
-    apogee    = simdata('flightdata','maxaltitude')
-    maxvel    = simdata('flightdata','maxvelocity')
-    maxacc    = simdata('flightdata','maxacceleration')
-    flightdur = simdata ('flightdata', 'flighttime') 
-    groundhit = simdata ('flightdata', 'groundhitvelocity')
+    apogee    = simdata (sims,'flightdata','maxaltitude')
+    maxvel    = simdata (sims, 'flightdata','maxvelocity')
+    maxacc    = simdata (sims, 'flightdata','maxacceleration')
+    flightdur = simdata (sims, 'flightdata', 'flighttime') 
+    groundhit = simdata (sims, 'flightdata', 'groundhitvelocity')
+    maxmach   = simdata (sims,'flightdata', 'maxmach')
+    timetoapp = simdata (sims, 'flightdata', 'timetoapogee')
 
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
     # see raw xml to get attrib keys
 
     # pretty print data
-    summary = str()
-
-    summary += f"**Motor selected for use:** {motor} <br/> \n"
-    summary += f"**Apogee:** {apogee} m <br/> \n"
-    summary += f"**Max speed:** {maxvel} m/s <br/> \n"
-    summary += f"**Max acceleration:** {maxacc} m/s^2 <br/> \n"
-    summary += f"**Flight duration:** {flightdur} s <br/> \n"
-    summary += f"**Ground hit velocity:** {groundhit} m/s <br/> \n"
-    summary += f"**Dry mass:** {mass} kg "
+    sumlist = [f"**Motor selected for use:** {motor} <br/> \n", f"**Apogee:** {apogee} m <br/> \n", f"**Max speed:** {maxvel} m/s <br/> \n", f"**Max acceleration:** {maxacc} m/s^2 <br/> \n", f"**Flight duration:** {flightdur} s <br/> \n", f"**Ground hit velocity:** {groundhit} m/s <br/> \n", f"**Dry mass:** {mass} kg "]
+    summary = sumlist.join('')
 
     return summary
 
