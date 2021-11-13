@@ -431,7 +431,7 @@ Mass changed 164-&gt;182g 28/08</comment>
                     <designation>I216</designation>
                     <diameter>0.038</diameter>
                     <length>0.367</length>
-                    <delay>5.0</delay>
+                    <delay>14.0</delay>
                   </motor>
                   <ignitionconfiguration configid="d11988e2-2f05-4976-958a-c534de073028">
                     <ignitionevent>automatic</ignitionevent>
@@ -584,7 +584,7 @@ Verified</comment>
   </rocket>
 
   <simulations>
-    <simulation status="cantrun">
+    <simulation status="uptodate">
       <name>APEX</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -602,8 +602,8 @@ Verified</comment>
         <atmosphere model="isa"/>
         <timestep>0.05</timestep>
       </conditions>
-      <flightdata maxaltitude="2881.3" maxvelocity="364.86" maxacceleration="211.76" maxmach="1.0786" timetoapogee="20.597" flighttime="131.3" groundhitvelocity="6.5301" launchrodvelocity="34.994" deploymentvelocity="36.316">
-        <warning>Recovery device deployment at high speed (45.9 m/s)</warning>
+      <flightdata maxaltitude="2082.9" maxvelocity="356.26" maxacceleration="205.55" maxmach="1.0533" timetoapogee="12.938" flighttime="12.989" launchrodvelocity="34.017" deploymentvelocity="166.9">
+        <warning>Recovery device deployment at high speed (167 m/s)</warning>
       </flightdata>
     </simulation>
 
