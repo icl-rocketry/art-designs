@@ -52,7 +52,13 @@ L-class motor, apogee ~ 5890m (record: 5716m)
 ### Simulation Data
 <!-- ASCENSION Info Start -->
 
-**Motor selected for use:** No motor found <br/>**Apogee:** 5747.8 m <br/>**Max speed:** 612.43 m/s <br/>**Max acceleration:** 239.58 m/s^2 <br/>**Flight duration:** 28.49 s <br/>**Ground hit velocity:** Error parsing simulation data m/s <br/>**Dry mass:** 0.2 kg 
+**Motor selected for use:** No motor found <br/> 
+**Apogee:** 5747.8 m <br/> 
+**Max speed:** 612.43 m/s <br/> 
+**Max acceleration:** 239.58 m/s^2 <br/> 
+**Flight duration:** 28.49 s <br/> 
+**Ground hit velocity:** Error parsing simulation data m/s <br/> 
+**Dry mass:** 0.2 kg  
 
 <!-- ASCENSION Info End -->
 
