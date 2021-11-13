@@ -1,3 +1,4 @@
+from abc import abstractproperty
 import xml.etree.ElementTree as ET
 import subprocess
 
@@ -22,38 +23,25 @@ def headlines(design = "APEX"):
     try:
         mass = 0
         for element in rocket.iter('overridemass'):
-            mass = mass + float(element.text)
+            mass += float(element.text)
         for element in rocket.iter('mass'):
-            mass = mass + float(element.text)
+            mass += float(element.text)
         mass = round(mass, 3) # we can only measure to nearest gram anyway
     except:
         mass = "Mass calculation not available"
 
     # extract simulation data
-    try:
-        apogee = sims[0].find('flightdata').attrib['maxaltitude']        
-    except:
-        apogee = "Error parsing simulation data"
+    def simdata(dataset,att):
+        try:
+            res = sims[0].find(dataset).attrib[att]
+        except: 
+            res = "Error parsing simulation data"
 
-    try:
-        maxvel = sims[0].find('flightdata').attrib['maxvelocity']
-    except:
-        maxvel = "Error parsing simulation data"
-
-    try:
-        maxacc = sims[0].find('flightdata').attrib['maxacceleration']
-    except:
-        maxacc = "Error parsing simulation data"
-
-    try:
-        flightdur = sims[0].find('flightdata').attrib['flighttime']
-    except:
-        flightdur = "Error parsing simulation data"
-
-    try:
-        groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
-    except:
-        groundhit = "Error parsing simulation data"
+    apogee    = simdata('flightdata','maxaltitude')
+    maxvel    = simdata('flightdata','maxvelocity')
+    maxacc    = simdata('flightdata','maxacceleration')
+    flightdur = simdata ('flightdata', 'flighttime') 
+    groundhit = simdata ('flightdata', 'groundhitvelocity')
 
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
     # see raw xml to get attrib keys
