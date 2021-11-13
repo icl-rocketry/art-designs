@@ -9,66 +9,47 @@ def headlines(design = "APEX"):
 
     # split into physical attributes and simulation results
     rocket = root[0]
-    sims = root[1]
+    sims   = root[1]
 
+    def simdata(rootObj,dataset,att):
+        try:
+            res = rootObj[0].find(dataset).attrib[att]
+        except: 
+            res = "Error parsing simulation/rocket data"
+        return res 
+    
     # get motor
-    try:
-        for element in rocket.iter('motorconfiguration'):
-            motor = element[0].text
-    except:
-        motor = "No motor found"
+    motor   = "motor not found"
+    element = rocket.iter('motorconfiguration')
+    if (element != []):
+        motor = element[0].text
 
     # sum mass components
-    try:
-        mass = 0
-        for element in rocket.iter('overridemass'):
-            mass = mass + float(element.text)
-        for element in rocket.iter('mass'):
-            mass = mass + float(element.text)
-        mass = round(mass, 3) # we can only measure to nearest gram anyway
-    except:
-        mass = "Mass calculation not available"
+
+    mass = 0
+    for elementkey in [rocket.iter('overridemass'),rocket.iter('mass')]:
+        for element in elementkey:
+            mass += float(element.text)
+    mass = round(mass, 3) # we can only measure to nearest gram anyway
+    if mass == 0 :
+        mass = "mass not found"
+    
 
     # extract simulation data
-    try:
-        apogee = sims[0].find('flightdata').attrib['maxaltitude']        
-    except:
-        apogee = "Error parsing simulation data"
-
-    try:
-        maxvel = sims[0].find('flightdata').attrib['maxvelocity']
-    except:
-        maxvel = "Error parsing simulation data"
-
-    try:
-        maxacc = sims[0].find('flightdata').attrib['maxacceleration']
-    except:
-        maxacc = "Error parsing simulation data"
-
-    try:
-        flightdur = sims[0].find('flightdata').attrib['flighttime']
-    except:
-        flightdur = "Error parsing simulation data"
-
-    try:
-        groundhit = sims[0].find('flightdata').attrib['groundhitvelocity']
-    except:
-        groundhit = "Error parsing simulation data"
+    apogee    = simdata (sims,'flightdata','maxaltitude')
+    maxvel    = simdata (sims, 'flightdata','maxvelocity')
+    maxacc    = simdata (sims, 'flightdata','maxacceleration')
+    flightdur = simdata (sims, 'flightdata', 'flighttime') 
+    groundhit = simdata (sims, 'flightdata', 'groundhitvelocity')
+    maxmach   = simdata (sims,'flightdata', 'maxmach')
+    timetoapp = simdata (sims, 'flightdata', 'timetoapogee')
 
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
     # see raw xml to get attrib keys
 
     # pretty print data
-    summary = str()
-
-    summary += f"**Motor selected for use:** {motor} <br/> \n"
-    summary += f"**Apogee:** {apogee} m <br/> \n"
-    summary += f"**Max speed:** {maxvel} m/s <br/> \n"
-    summary += f"**Max acceleration:** {maxacc} m/s^2 <br/> \n"
-    summary += f"**Flight duration:** {flightdur} s <br/> \n"
-    summary += f"**Ground hit velocity:** {groundhit} m/s <br/> \n"
-    summary += f"**Dry mass:** {mass} kg "
-
+    sumlist = [f"**Motor selected for use:** {motor} <br/> \n", f"**Apogee:** {apogee} m <br/> \n", f"**Max speed:** {maxvel} m/s <br/> \n", f"**Max acceleration:** {maxacc} m/s^2 <br/> \n", f"**Flight duration:** {flightdur} s <br/> \n", f"**Ground hit velocity:** {groundhit} m/s <br/> \n", f"**Dry mass:** {mass} kg "]
+    summary = sumlist.join('')
     return summary
 
 def update_readme(design = "APEX"):
