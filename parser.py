@@ -1,7 +1,9 @@
 import xml.etree.ElementTree as ET
 import subprocess
+import sys
 
-def headlines(design = "APEX"):
+design = sys.argv[1]      # getting cmd line argument 
+def headlines(design):
     # parse ork file
     fname = design + ".ork"
     tree = ET.parse(fname)
@@ -48,11 +50,13 @@ def headlines(design = "APEX"):
     # see raw xml to get attrib keys
 
     # pretty print data
-    sumlist = [f"**Motor selected for use:** {motor} <br/> \n", f"**Apogee:** {apogee} m <br/> \n", f"**Max speed:** {maxvel} m/s <br/> \n", f"**Max acceleration:** {maxacc} m/s^2 <br/> \n", f"**Flight duration:** {flightdur} s <br/> \n", f"**Ground hit velocity:** {groundhit} m/s <br/> \n", f"**Dry mass:** {mass} kg "]
-    summary = sumlist.join('')
+    # sumlist = [f"**Motor selected for use:** {motor} <br/> \n", f"**Apogee:** {apogee} m <br/> \n", f"**Max speed:** {maxvel} m/s <br/> \n", f"**Max acceleration:** {maxacc} m/s^2 <br/> \n", f"**Flight duration:** {flightdur} s <br/> \n", f"**Ground hit velocity:** {groundhit} m/s <br/> \n", f"**Dry mass:** {mass} kg "]
+    # summary = sumlist.join('')
+    sumlist = "**Motor selected for use:** {0} <br/> \n **Apogee:** {1} m <br/> \n **Max speed:** {2} m/s <br/> \n **Max acceleration:** {3} m/s^2 <br/> \n **Flight duration:** {4} <br/> \n **Ground hit velocity:** {5} m/s <br/> \n **Dry mass:** {6} kg "
+    summary = sumlist.format(motor, apogee, maxvel, maxacc, flightdur, groundhit, mass)
     return summary
 
-def update_readme(design = "APEX"):
+def update_readme(design):
     # get data to update
     summary = headlines(design)
     # print(summary)
@@ -81,7 +85,7 @@ def update_readme(design = "APEX"):
     with open("README.md", 'w') as file:
         file.write(readme)    
 
-def create_commit(design = "APEX"):
+def create_commit(design):
     # create new readme
     #update_readme(design)
 
