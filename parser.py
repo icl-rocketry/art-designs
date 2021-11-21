@@ -46,12 +46,13 @@ def headlines(design):
     maxmach   = simdata (sims,'flightdata', 'maxmach')
     timetoapp = simdata (sims, 'flightdata', 'timetoapogee')
 
+    launchAngle = sims[0].find('launchrodangle').get()
+    print(launchAngle)
+
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
     # see raw xml to get attrib keys
 
     # pretty print data
-    # sumlist = [f"**Motor selected for use:** {motor} <br/> \n", f"**Apogee:** {apogee} m <br/> \n", f"**Max speed:** {maxvel} m/s <br/> \n", f"**Max acceleration:** {maxacc} m/s^2 <br/> \n", f"**Flight duration:** {flightdur} s <br/> \n", f"**Ground hit velocity:** {groundhit} m/s <br/> \n", f"**Dry mass:** {mass} kg "]
-    # summary = sumlist.join('')
     sumlist = "**Motor selected for use:** {0} <br/> \n **Apogee:** {1} m <br/> \n **Max speed:** {2} m/s <br/> \n **Max acceleration:** {3} m/s^2 <br/> \n **Flight duration:** {4} <br/> \n **Ground hit velocity:** {5} m/s <br/> \n **Dry mass:** {6} kg "
     summary = sumlist.format(motor, apogee, maxvel, maxacc, flightdur, groundhit, mass)
     return summary
