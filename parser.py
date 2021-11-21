@@ -46,8 +46,7 @@ def headlines(design):
     maxmach   = simdata (sims,'flightdata', 'maxmach')
     timetoapp = simdata (sims, 'flightdata', 'timetoapogee')
 
-    launchAngle = sims[0].find('launchrodangle').pop()
-    print(launchAngle)
+    launchAngle = sims[0].find('launchrodangle')[0]
 
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
     # see raw xml to get attrib keys
@@ -55,11 +54,12 @@ def headlines(design):
     # pretty print data
     sumlist = "**Motor selected for use:** {0} <br/> \n **Apogee:** {1} m <br/> \n **Max speed:** {2} m/s <br/> \n **Max acceleration:** {3} m/s^2 <br/> \n **Flight duration:** {4} <br/> \n **Ground hit velocity:** {5} m/s <br/> \n **Dry mass:** {6} kg "
     summary = sumlist.format(motor, apogee, maxvel, maxacc, flightdur, groundhit, mass)
-    return summary
+    csvdata = [launchAngle, apogee]
+    return [summary, csvdata]
 
 def update_readme(design):
     # get data to update
-    summary = headlines(design)
+    summary = (headlines(design))[0]
     # print(summary)
     # initialise markers
     start = f"<!-- {design} Info Start -->"
