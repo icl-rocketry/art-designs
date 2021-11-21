@@ -46,7 +46,7 @@ def headlines(design):
     maxmach   = simdata (sims,'flightdata', 'maxmach')
     timetoapp = simdata (sims, 'flightdata', 'timetoapogee')
 
-    launchAngle = sims[0].find('launchrodangle').get()
+    launchAngle = sims[0].find('launchrodangle').pop()
     print(launchAngle)
 
     # other extractable params - max mach, time to apogee, launch rod vel, deployment vel
@@ -102,4 +102,3 @@ def create_commit(design):
     subprocess.run("git push origin HEAD", shell=True)
     
 create_commit("APEX")
-create_commit("ASCENSION")
