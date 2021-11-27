@@ -54,12 +54,11 @@ def headlines(design):
     # pretty print data
     sumlist = "**Motor selected for use:** {0} <br/> \n **Apogee:** {1} m <br/> \n **Max speed:** {2} m/s <br/> \n **Max acceleration:** {3} m/s^2 <br/> \n **Flight duration:** {4} <br/> \n **Ground hit velocity:** {5} m/s <br/> \n **Dry mass:** {6} kg "
     summary = sumlist.format(motor, apogee, maxvel, maxacc, flightdur, groundhit, mass)
-    csvdata = [launchAngle, apogee]
-    return [summary, csvdata]
+    return summary
 
 def update_readme(design):
     # get data to update
-    summary = (headlines(design))[0]
+    summary = headlines(design)
     # print(summary)
     # initialise markers
     start = f"<!-- {design} Info Start -->"
