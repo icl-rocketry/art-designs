@@ -3,9 +3,7 @@
   <rocket>
     <name>Rocket</name>
     <axialoffset method="absolute">0.0</axialoffset>
-    <comment>Goal height needs to be 3220m or thereabout --&gt; Provides a 400 ft buffer on record.</comment>
-    <revision>Updated to include interfacing, needs to include drogue dimensions and manipulate stability.</revision>
-    <motorconfiguration configid="d11988e2-2f05-4976-958a-c534de073028" default="true"/>
+    <motorconfiguration configid="1194bbae-239c-4717-8d67-b9e95bdb6680" default="true"/>
     <referencetype>maximum</referencetype>
 
     <subcomponents>
@@ -14,350 +12,170 @@
 
         <subcomponents>
           <nosecone>
-            <name>Nose cone ✔</name>
-            <overridemass>0.276</overridemass>
-            <overridecg>0.1</overridecg>
-            <overridesubcomponents>false</overridesubcomponents>
-            <comment>3D Printed with infill
-Mass verified with manufactured component - filled with &#39;liquid gravity&#39; to improve stability
-https://deluxematerials.co.uk/products/liquid-gravity
-CG verified with manufactured component
-Separates for recovery</comment>
+            <name>Nose cone</name>
             <finish>normal</finish>
-            <material type="bulk" density="900.0">ABS</material>
-            <length>0.22399999999999998</length>
-            <thickness>filled</thickness>
-            <shape>haack</shape>
+            <material type="bulk" density="950.0">Kraft phenolic</material>
+            <length>0.24999999999999997</length>
+            <thickness>0.0019999999999999996</thickness>
+            <shape>power</shape>
             <shapeclipped>false</shapeclipped>
-            <shapeparameter>0.0</shapeparameter>
-            <aftradius>auto</aftradius>
-            <aftshoulderradius>0.027400000000000004</aftshoulderradius>
-            <aftshoulderlength>0.03</aftshoulderlength>
-            <aftshoulderthickness>0.0085</aftshoulderthickness>
+            <shapeparameter>0.5</shapeparameter>
+            <aftradius>0.04</aftradius>
+            <aftshoulderradius>0.0</aftshoulderradius>
+            <aftshoulderlength>0.0</aftshoulderlength>
+            <aftshoulderthickness>0.0</aftshoulderthickness>
             <aftshouldercapped>false</aftshouldercapped>
-
-            <subcomponents>
-              <masscomponent>
-                <name>Electronics Bay ✔</name>
-                <axialoffset method="absolute">0.162</axialoffset>
-                <overridemass>0.0205</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>PNUT altimeter
-While this component uses a pressure tapping less than 1 body dimater from the nose cone, it should still provide a reliable altitude at apogee (which is the only value the PNUT stores). It will be verified with the barometer in this test flight, although plans are being made to change its position for future flights.
-Mass verified with data sheet, including casing and foam protection</comment>
-                <packedlength>0.077</packedlength>
-                <packedradius>0.013999999999999999</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.0205</mass>
-                <masscomponenttype>altimeter</masscomponenttype>
-              </masscomponent>
-
-              <masscomponent>
-                <name>Avionics Retention ✔</name>
-                <appearance>
-                <paint red="1" green="1" blue="1" alpha="255"/>
-                <shine>0.0</shine>
-                </appearance>
-                <axialoffset method="absolute">0.239</axialoffset>
-                <comment>Holds avionics PNUT in place using dowel and 3D printed support
-Mass small - likely &gt;2g, although it was difficult to measure these components due to manufacturing constraints during covid-19. </comment>
-                <packedlength>0.015</packedlength>
-                <packedradius>0.0175</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.002</mass>
-                <masscomponenttype>payload</masscomponenttype>
-              </masscomponent>
-            </subcomponents>
           </nosecone>
 
           <bodytube>
-            <name>Upper Body Tube ✔</name>
-            <overridemass>0.131</overridemass>
-            <overridesubcomponents>false</overridesubcomponents>
-            <comment>Black Cat Rocketry Phenolic Tube
-https://www.blackcatrocketry.co.uk/products/phenolic-airframe-tube
-Mass verified with manufactured component</comment>
-            <finish>unfinished</finish>
+            <name>Body tube</name>
+            <finish>normal</finish>
             <material type="bulk" density="950.0">Kraft phenolic</material>
-            <length>0.27</length>
-            <thickness>0.0012499999999999976</thickness>
-            <radius>0.028624999999999998</radius>
+            <length>0.48</length>
+            <thickness>0.002</thickness>
+            <radius>auto</radius>
 
             <subcomponents>
+              <parachute>
+                <name>Parachute</name>
+                <axialoffset method="bottom">0.0</axialoffset>
+                <packedlength>0.12499999999999999</packedlength>
+                <packedradius>0.0225</packedradius>
+                <radialposition>0.0</radialposition>
+                <radialdirection>0.0</radialdirection>
+                <cd>0.8</cd>
+                <material type="surface" density="0.067">Ripstop nylon</material>
+                <deployevent>ejection</deployevent>
+                <deployaltitude>200.0</deployaltitude>
+                <deploydelay>0.0</deploydelay>
+                <diameter>0.8</diameter>
+                <linecount>40</linecount>
+                <linelength>0.21999999999999997</linelength>
+                <linematerial type="line" density="0.0018">Elastic cord (round 2 mm, 1/16 in)</linematerial>
+              </parachute>
+
+              <shockcord>
+                <name>Shock cord</name>
+                <axialoffset method="bottom">-0.09</axialoffset>
+                <packedlength>0.03499999999999999</packedlength>
+                <packedradius>0.0325</packedradius>
+                <radialposition>0.0</radialposition>
+                <radialdirection>0.0</radialdirection>
+                <cordlength>0.4</cordlength>
+                <material type="line" density="0.0018">Elastic cord (round 2 mm, 1/16 in)</material>
+              </shockcord>
+
               <bulkhead>
-                <name>Bulkhead ✔</name>
+                <name>Bulkhead</name>
                 <instancecount>1</instancecount>
                 <instanceseparation>0.0</instanceseparation>
-                <axialoffset method="top">0.03</axialoffset>
-                <overridemass>0.02</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Bulkhead to hold Recovery eye-bolt
-Mass validated with manufactured component</comment>
-                <material type="bulk" density="1390.0">ABS</material>
-                <length>0.015</length>
+                <axialoffset method="bottom">-0.125</axialoffset>
+                <material type="bulk" density="950.0">Kraft phenolic</material>
+                <length>0.01</length>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
                 <outerradius>auto</outerradius>
               </bulkhead>
 
-              <masscomponent>
-                <name>M8 Nut ✔</name>
-                <axialoffset method="absolute">0.254</axialoffset>
-                <overridemass>0.006</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Secures the eye-bolt
-Mass verified</comment>
-                <packedlength>0.006999999999999999</packedlength>
-                <packedradius>0.008</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.006</mass>
-                <masscomponenttype>recoveryhardware</masscomponenttype>
-              </masscomponent>
-
-              <masscomponent>
-                <name>Eye-Bolt ✔</name>
-                <axialoffset method="absolute">0.26899999999999996</axialoffset>
-                <overridemass>0.081</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Secures recovery hardware
-Mass verified with with manufactured component</comment>
-                <packedlength>0.036000000000000004</packedlength>
-                <packedradius>0.013000000000000001</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.081</mass>
-                <masscomponenttype>recoveryhardware</masscomponenttype>
-              </masscomponent>
-
-              <masscomponent>
-                <name>Barometer ✔</name>
-                <axialoffset method="absolute">0.26899999999999996</axialoffset>
-                <comment>Tube shaped, ID &gt; 26mm (fits around eye bolt)
-To verify PNUT measurements, and to gather additional data regarding altitude measurements and pressure port position, this barometer will be fitted.
-The PNUT is expected to only be accurate at apogee, and will be moved in future rockets
-----------
-Need to confirm mass</comment>
-                <packedlength>0.067</packedlength>
-                <packedradius>0.027375</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.045</mass>
-                <masscomponenttype>altimeter</masscomponenttype>
-              </masscomponent>
-
-              <centeringring>
-                <name>Recovery Ring ✔</name>
-                <instancecount>1</instancecount>
-                <instanceseparation>0.0</instanceseparation>
-                <axialoffset method="bottom">-0.12000000000000004</axialoffset>
-                <overridemass>0.002</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>This parachute will be used as a test of the APEX recovery system. However, APEX has a smaller inner diameter, so an inner tube with centering rings is used to hold it in place.
-----------
-Mass small</comment>
-                <material type="bulk" density="680.0">Cardboard</material>
-                <length>0.002</length>
+              <tubecoupler>
+                <name>Tube coupler</name>
+                <axialoffset method="top">3.552713678800501E-17</axialoffset>
+                <material type="bulk" density="950.0">Kraft phenolic</material>
+                <length>0.06</length>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
                 <outerradius>auto</outerradius>
-                <innerradius>auto</innerradius>
-              </centeringring>
+                <thickness>0.003</thickness>
+              </tubecoupler>
 
-              <centeringring>
-                <name>Recovery RIng ✔</name>
-                <instancecount>1</instancecount>
-                <instanceseparation>0.0</instanceseparation>
-                <axialoffset method="bottom">-0.067</axialoffset>
-                <overridemass>0.002</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>See comments on other recovery ring
-----------
-Mass small</comment>
-                <material type="bulk" density="680.0">Cardboard</material>
-                <length>0.002</length>
+              <masscomponent>
+                <name>Recovery </name>
+                <axialoffset method="top">0.27</axialoffset>
+                <packedlength>0.2</packedlength>
+                <packedradius>0.035</packedradius>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <outerradius>auto</outerradius>
-                <innerradius>auto</innerradius>
-              </centeringring>
+                <mass>0.0</mass>
+                <masscomponenttype>masscomponent</masscomponenttype>
+              </masscomponent>
 
-              <innertube>
-                <name>Recovery inner tube (paper) ✔</name>
-                <axialoffset method="bottom">-0.03500000000000002</axialoffset>
-                <overridemass>0.002</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Holds parachute in position (A4 Rolled to same internal diameter as APEX)
-Mass should be small</comment>
-                <material type="bulk" density="820.0">Paper (office)</material>
-                <length>0.12</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>0.021</outerradius>
-                <thickness>5.000000000000004E-4</thickness>
-                <clusterconfiguration>single</clusterconfiguration>
-                <clusterscale>1.0</clusterscale>
-                <clusterrotation>0.0</clusterrotation>
-              </innertube>
-
-              <parachute>
-                <name>Main Parachute ✔</name>
-                <axialoffset method="absolute">0.33899999999999997</axialoffset>
-                <overridemass>0.045</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Mass validated</comment>
-                <packedlength>0.11199999999999999</packedlength>
-                <packedradius>0.0203</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <cd>auto</cd>
-                <material type="surface" density="0.067">Ripstop nylon</material>
-                <deployevent>altitude</deployevent>
-                <deployaltitude>100.0</deployaltitude>
-                <deploydelay>0.0</deploydelay>
-                <diameter>0.6095999999999999</diameter>
-                <linecount>8</linecount>
-                <linelength>0.3</linelength>
-                <linematerial type="line" density="0.0018">Elastic cord (round 2 mm, 1/16 in)</linematerial>
-              </parachute>
-
-              <streamer>
-                <name>Streamer ✔</name>
-                <axialoffset method="bottom">-0.023</axialoffset>
-                <overridemass>0.0135</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Mass validated
-Positioned around chute release</comment>
+              <masscomponent>
+                <name>Avionics</name>
+                <axialoffset method="top">0.0</axialoffset>
                 <packedlength>0.15</packedlength>
-                <packedradius>0.019</packedradius>
+                <packedradius>0.035</packedradius>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <cd>auto</cd>
-                <material type="surface" density="0.18">Nomex</material>
-                <deployevent>apogee</deployevent>
-                <deployaltitude>100.0</deployaltitude>
-                <deploydelay>0.0</deploydelay>
-                <striplength>0.5</striplength>
-                <stripwidth>0.15</stripwidth>
-              </streamer>
-
-              <masscomponent>
-                <name>Chute Release ✔</name>
-                <axialoffset method="bottom">-0.001</axialoffset>
-                <overridemass>0.10200000000000001</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Mass verified with component</comment>
-                <packedlength>0.054000000000000006</packedlength>
-                <packedradius>0.005</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.10200000000000001</mass>
-                <masscomponenttype>recoveryhardware</masscomponenttype>
+                <mass>0.1</mass>
+                <masscomponenttype>masscomponent</masscomponenttype>
               </masscomponent>
             </subcomponents>
           </bodytube>
 
           <bodytube>
-            <name>Lower Body Tube ✔</name>
-            <overridemass>0.04481</overridemass>
-            <overridesubcomponents>false</overridesubcomponents>
-            <comment>Black Cat Rocketry Phenolic Tube
-https://www.blackcatrocketry.co.uk/products/phenolic-airframe-tube
-Mass verified with manufactured component</comment>
-            <finish>unfinished</finish>
+            <name>Body tube</name>
+            <finish>normal</finish>
             <material type="bulk" density="950.0">Kraft phenolic</material>
-            <length>0.15</length>
-            <thickness>0.0012499999999999976</thickness>
-            <radius>0.028624999999999998</radius>
+            <length>0.44</length>
+            <thickness>0.0020000000000000018</thickness>
+            <radius>0.04</radius>
+            <motormount>
+              <ignitionevent>automatic</ignitionevent>
+              <ignitiondelay>0.0</ignitiondelay>
+              <overhang>0.0</overhang>
+              <motor configid="1194bbae-239c-4717-8d67-b9e95bdb6680">
+                <type>reload</type>
+                <manufacturer>Cesaroni Technology</manufacturer>
+                <digest>24aee394988e2a8f87dea040e9ca7dfa</digest>
+                <designation>I216</designation>
+                <diameter>0.038</diameter>
+                <length>0.367</length>
+                <delay>14.0</delay>
+              </motor>
+              <ignitionconfiguration configid="1194bbae-239c-4717-8d67-b9e95bdb6680">
+                <ignitionevent>automatic</ignitionevent>
+                <ignitiondelay>0.0</ignitiondelay>
+              </ignitionconfiguration>
+            </motormount>
 
             <subcomponents>
-              <tubecoupler>
-                <name>Tube coupler ✔</name>
-                <axialoffset method="bottom">-0.095</axialoffset>
-                <overridemass>0.045</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Mass verified with manufactured component</comment>
-                <material type="bulk" density="1070.0">ABS</material>
-                <length>0.11</length>
+              <engineblock>
+                <name>Engine block</name>
+                <axialoffset method="bottom">-0.0</axialoffset>
+                <material type="bulk" density="950.0">Kraft phenolic</material>
+                <length>0.01</length>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <outerradius>0.027400000000000004</outerradius>
-                <thickness>0.004900000000000005</thickness>
-              </tubecoupler>
+                <outerradius>0.0355</outerradius>
+                <thickness>0.0</thickness>
+              </engineblock>
 
-              <masscomponent>
-                <name>U-Bolt ✔</name>
-                <axialoffset method="bottom">-0.083</axialoffset>
-                <overridemass>0.005</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Mass verified with manfuactured component</comment>
-                <packedlength>0.040999999999999995</packedlength>
-                <packedradius>0.006325</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.005</mass>
-                <masscomponenttype>recoveryhardware</masscomponenttype>
-              </masscomponent>
-
-              <masscomponent>
-                <name>Ejectection Charge ✔</name>
-                <axialoffset method="bottom">-0.083</axialoffset>
-                <comment>Ignited by the motor
-Causes nosecone to detach for recovery device deployment</comment>
-                <packedlength>0.005</packedlength>
-                <packedradius>0.0125</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.003</mass>
-                <masscomponenttype>deploymentcharge</masscomponenttype>
-              </masscomponent>
-
-              <bulkhead>
-                <name>Thrust Ring ✔</name>
-                <instancecount>1</instancecount>
-                <instanceseparation>0.0</instanceseparation>
-                <axialoffset method="bottom">-0.068</axialoffset>
-                <overridemass>0.027</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Note diameter matches internal body tube diameter
-Mass verified</comment>
-                <material type="bulk" density="1070.0">ABS</material>
-                <length>0.015</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>auto</outerradius>
-              </bulkhead>
-
-              <centeringring>
-                <name>Centering ring ✔</name>
-                <instancecount>1</instancecount>
-                <instanceseparation>0.0</instanceseparation>
-                <axialoffset method="bottom">-0.045</axialoffset>
-                <comment>OD matches ID of body tube
-mass expected to be small</comment>
-                <material type="bulk" density="680.0">Cardboard</material>
-                <length>0.002</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>0.027375</outerradius>
-                <innerradius>auto</innerradius>
-              </centeringring>
+              <ellipticalfinset>
+                <name>Elliptical fin set</name>
+                <instancecount>3</instancecount>
+                <radiusoffset method="surface">0.0</radiusoffset>
+                <angleoffset method="relative">0.0</angleoffset>
+                <axialoffset method="bottom">0.0</axialoffset>
+                <finish>normal</finish>
+                <material type="bulk" density="950.0">Kraft phenolic</material>
+                <thickness>0.003</thickness>
+                <crosssection>square</crosssection>
+                <cant>0.0</cant>
+                <filletradius>0.0</filletradius>
+                <filletmaterial type="bulk" density="950.0">Kraft phenolic</filletmaterial>
+                <rootchord>0.11000000000000006</rootchord>
+                <height>0.08899999999999995</height>
+              </ellipticalfinset>
 
               <innertube>
-                <name>29mm Motor Case ✔</name>
-                <axialoffset method="bottom">0.111</axialoffset>
-                <overridemass>0.062</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Aluminium - mass verified from manufactured part
-Holds motor inside motor tube</comment>
+                <name>Inner Tube</name>
+                <axialoffset method="bottom">0.0</axialoffset>
                 <material type="bulk" density="950.0">Kraft phenolic</material>
-                <length>0.18670000000000003</length>
+                <length>0.37</length>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <outerradius>0.014499999999999999</outerradius>
-                <thickness>0.001199999999999998</thickness>
+                <outerradius>0.0245</outerradius>
+                <thickness>5.000000000000004E-4</thickness>
                 <clusterconfiguration>single</clusterconfiguration>
                 <clusterscale>1.0</clusterscale>
                 <clusterrotation>0.0</clusterrotation>
@@ -365,107 +183,47 @@ Holds motor inside motor tube</comment>
                   <ignitionevent>automatic</ignitionevent>
                   <ignitiondelay>0.0</ignitiondelay>
                   <overhang>0.0</overhang>
-                  <motor configid="d11988e2-2f05-4976-958a-c534de073028">
-                    <type>reload</type>
-                    <manufacturer>Cesaroni Technology</manufacturer>
-                    <digest>f1b21fa0398fa4bf2cd4a258e3eb6f83</digest>
-                    <designation>G54</designation>
-                    <diameter>0.029</diameter>
-                    <length>0.187</length>
-                    <delay>7.0</delay>
-                  </motor>
-                  <ignitionconfiguration configid="d11988e2-2f05-4976-958a-c534de073028">
-                    <ignitionevent>automatic</ignitionevent>
-                    <ignitiondelay>0.0</ignitiondelay>
-                  </ignitionconfiguration>
                 </motormount>
+
+                <subcomponents>
+                  <centeringring>
+                    <name>Centering ring</name>
+                    <instancecount>1</instancecount>
+                    <instanceseparation>0.0</instanceseparation>
+                    <axialoffset method="bottom">-0.14</axialoffset>
+                    <material type="bulk" density="950.0">Kraft phenolic</material>
+                    <length>0.006</length>
+                    <radialposition>0.0</radialposition>
+                    <radialdirection>0.0</radialdirection>
+                    <outerradius>0.034</outerradius>
+                    <innerradius>auto</innerradius>
+                  </centeringring>
+
+                  <centeringring>
+                    <name>Centering ring</name>
+                    <instancecount>1</instancecount>
+                    <instanceseparation>0.0</instanceseparation>
+                    <axialoffset method="bottom">-0.29000000000000004</axialoffset>
+                    <material type="bulk" density="950.0">Kraft phenolic</material>
+                    <length>0.003999999999999999</length>
+                    <radialposition>0.0</radialposition>
+                    <radialdirection>0.0</radialdirection>
+                    <outerradius>0.034</outerradius>
+                    <innerradius>auto</innerradius>
+                  </centeringring>
+                </subcomponents>
               </innertube>
 
-              <innertube>
-                <name>Motor Tube ✔</name>
-                <axialoffset method="bottom">0.106</axialoffset>
-                <overridemass>0.023</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Blakc Cat Phenolic - mass verified from manufactured component
-https://www.blackcatrocketry.co.uk/products/phenolic-airframe-tube?_pos=2&amp;_sid=7c301af90&amp;_ss=r</comment>
+              <tubecoupler>
+                <name>Tube coupler</name>
+                <axialoffset method="bottom">-0.38</axialoffset>
                 <material type="bulk" density="950.0">Kraft phenolic</material>
-                <length>0.16</length>
+                <length>0.06</length>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <outerradius>0.0159</outerradius>
-                <thickness>0.0012499999999999994</thickness>
-                <clusterconfiguration>single</clusterconfiguration>
-                <clusterscale>1.0</clusterscale>
-                <clusterrotation>0.0</clusterrotation>
-              </innertube>
-            </subcomponents>
-          </bodytube>
-
-          <bodytube>
-            <name>Fin Can ✔</name>
-            <overridemass>0.1262</overridemass>
-            <overridesubcomponents>false</overridesubcomponents>
-            <comment>Mass validated with manufactured part</comment>
-            <finish>smooth</finish>
-            <material type="bulk" density="1070.0">ABS</material>
-            <length>0.125</length>
-            <thickness>0.002</thickness>
-            <radius>auto</radius>
-
-            <subcomponents>
-              <centeringring>
-                <name>Centering ring ✔</name>
-                <instancecount>1</instancecount>
-                <instanceseparation>0.0</instanceseparation>
-                <axialoffset method="bottom">-0.049</axialoffset>
-                <overridemass>0.0</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Blended into fin can (so mass included in fin can)</comment>
-                <material type="bulk" density="680.0">Cardboard</material>
-                <length>0.002</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>0.027375</outerradius>
-                <innerradius>0.0159</innerradius>
-              </centeringring>
-
-              <engineblock>
-                <name>Motor Retainer ✔</name>
-                <axialoffset method="top">0.09300000000000001</axialoffset>
-                <overridemass>0.024</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Holds the motor inside the motor tube
-https://www.blackcatrocketry.co.uk/products/threaded-motor-retainer?_pos=2&amp;_sid=b8eaf80b2&amp;_ss=r&amp;variant=16559560263
-Mass verified with manufactured component</comment>
-                <material type="bulk" density="680.0">Cardboard</material>
-                <length>0.0347</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>0.01825</outerradius>
-                <thickness>0.0032499999999999994</thickness>
-              </engineblock>
-
-              <trapezoidfinset>
-                <name>Trapezoidal fin set ✔</name>
-                <instancecount>3</instancecount>
-                <radiusoffset method="surface">0.0</radiusoffset>
-                <angleoffset method="relative">0.0</angleoffset>
-                <axialoffset method="bottom">0.0</axialoffset>
-                <overridemass>0.027</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Mass verifies with manfuactured component</comment>
-                <finish>normal</finish>
-                <material type="bulk" density="680.0">ABS</material>
-                <thickness>0.003</thickness>
-                <crosssection>square</crosssection>
-                <cant>0.0</cant>
-                <filletradius>0.0</filletradius>
-                <filletmaterial type="bulk" density="680.0">Cardboard</filletmaterial>
-                <rootchord>0.07</rootchord>
-                <tipchord>0.045</tipchord>
-                <sweeplength>0.025</sweeplength>
-                <height>0.0425</height>
-              </trapezoidfinset>
+                <outerradius>auto</outerradius>
+                <thickness>0.0</thickness>
+              </tubecoupler>
             </subcomponents>
           </bodytube>
         </subcomponents>
@@ -474,38 +232,12 @@ Mass verified with manufactured component</comment>
   </rocket>
 
   <simulations>
-    <simulation status="cantrun">
+    <simulation status="uptodate">
       <name>Simulation 1</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
       <conditions>
-        <configid>d11988e2-2f05-4976-958a-c534de073028</configid>
-        <launchrodlength>2.0</launchrodlength>
-        <launchrodangle>0.0</launchrodangle>
-        <launchroddirection>90.0</launchroddirection>
-        <windaverage>3.0</windaverage>
-        <windturbulence>0.24999999999999997</windturbulence>
-        <launchaltitude>0.0</launchaltitude>
-        <launchlatitude>55.731403</launchlatitude>
-        <launchlongitude>-4.826953</launchlongitude>
-        <geodeticmethod>spherical</geodeticmethod>
-        <atmosphere model="extendedisa">
-          <basetemperature>307.15</basetemperature>
-          <basepressure>101325.0</basepressure>
-        </atmosphere>
-        <timestep>0.05</timestep>
-      </conditions>
-      <flightdata maxaltitude="550.41" maxvelocity="95.576" maxacceleration="88.481" maxmach="0.27316" timetoapogee="11.07" flighttime="30.06" groundhitvelocity="9.0995" launchrodvelocity="18.475" deploymentvelocity="87.309">
-        <warning>Recovery device deployment at high speed (27.4 m/s)</warning>
-      </flightdata>
-    </simulation>
-
-    <simulation status="cantrun">
-      <name>Simulation 2</name>
-      <simulator>RK4Simulator</simulator>
-      <calculator>BarrowmanCalculator</calculator>
-      <conditions>
-        <configid>d11988e2-2f05-4976-958a-c534de073028</configid>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
         <launchrodlength>1.0</launchrodlength>
         <launchrodangle>0.0</launchrodangle>
         <launchroddirection>90.0</launchroddirection>
@@ -518,6 +250,241 @@ Mass verified with manufactured component</comment>
         <atmosphere model="isa"/>
         <timestep>0.05</timestep>
       </conditions>
+      <flightdata maxaltitude="1404.6" maxvelocity="290.35" maxacceleration="217.15" maxmach="0.85722" timetoapogee="13.711" flighttime="13.811" launchrodvelocity="20.032">
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 2</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="1236.7" maxvelocity="268.94" maxacceleration="200.75" maxmach="0.79297" timetoapogee="13.396" flighttime="107" groundhitvelocity="27.406" launchrodvelocity="18.845">
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 3</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="1243.7" maxvelocity="260.29" maxacceleration="190.63" maxmach="0.76727" timetoapogee="13.608" flighttime="117.61" groundhitvelocity="11.359" launchrodvelocity="18.151" deploymentvelocity="30.526">
+        <warning>Recovery device deployment at high speed (30.5 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 5</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="1243.9" maxvelocity="260.31" maxacceleration="190.64" maxmach="0.76729" timetoapogee="13.602" flighttime="165.22" groundhitvelocity="7.6951" launchrodvelocity="18.151" deploymentvelocity="30.389">
+        <warning>Recovery device deployment at high speed (30.4 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 6</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="1175.6" maxvelocity="288.58" maxacceleration="233.5" maxmach="0.85116" timetoapogee="12.48" flighttime="179.86" groundhitvelocity="6.5622" launchrodvelocity="20.826" deploymentvelocity="25.583">
+        <warning>Recovery device deployment at high speed (25.6 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 7</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="811.37" maxvelocity="211.65" maxacceleration="375.37" maxmach="0.62247" timetoapogee="11.141" flighttime="111.74" groundhitvelocity="7.4925" launchrodvelocity="27.729" deploymentvelocity="34.489">
+        <warning>Recovery device deployment at high speed (34.5 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 8</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="809.99" maxvelocity="210.65" maxacceleration="373.59" maxmach="0.61954" timetoapogee="11.145" flighttime="111.22" groundhitvelocity="7.5286" launchrodvelocity="27.647" deploymentvelocity="34.529">
+        <warning>Recovery device deployment at high speed (34.5 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 9</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="771.02" maxvelocity="184.67" maxacceleration="325.65" maxmach="0.54314" timetoapogee="11.204" flighttime="198.02" groundhitvelocity="3.9188" launchrodvelocity="25.462" deploymentvelocity="35.397">
+        <warning>Recovery device deployment at high speed (35.4 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 10</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="785.09" maxvelocity="191.95" maxacceleration="339.07" maxmach="0.56444" timetoapogee="11.242" flighttime="143.01" groundhitvelocity="5.4671" launchrodvelocity="26.081" deploymentvelocity="34.519">
+        <warning>Recovery device deployment at high speed (34.5 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 11</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>1194bbae-239c-4717-8d67-b9e95bdb6680</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="788.34" maxvelocity="194.27" maxacceleration="343.23" maxmach="0.57138" timetoapogee="11.232" flighttime="118.67" groundhitvelocity="6.7521" launchrodvelocity="26.268" deploymentvelocity="35.643">
+        <warning>Recovery device deployment at high speed (35.7 m/s)</warning>
+      </flightdata>
     </simulation>
   </simulations>
+  <photostudio>
+  <roll>3.14</roll>
+  <yaw>0.0</yaw>
+  <pitch>2.05</pitch>
+  <advance>0.0</advance>
+  <viewAlt>-0.23</viewAlt>
+  <viewAz>2.08</viewAz>
+  <viewDistance>0.44</viewDistance>
+  <fov>1.4</fov>
+  <lightAlt>0.35</lightAlt>
+  <lightAz>-1.0</lightAz>
+  <sunlight red="255" green="255" blue="255" alpha="255"/>
+  <ambiance>0.30000001192092896</ambiance>
+  <skyColor red="55" green="95" blue="155" alpha="255"/>
+  <motionBlurred>false</motionBlurred>
+  <flame>false</flame>
+  <flameColor red="255" green="100" blue="50" alpha="255"/>
+  <smoke>false</smoke>
+  <smokeColor red="230" green="230" blue="230" alpha="102"/>
+  <smokeOpacity>0.4</smokeOpacity>
+  <sparks>false</sparks>
+  <exhaustScale>1.0</exhaustScale>
+  <flameAspectRatio>1.0</flameAspectRatio>
+  <sparkConcentration>0.0</sparkConcentration>
+  <sparkWeight>0.0</sparkWeight>
+  <sky>net.sf.openrocket.gui.figure3d.photo.sky.builtin.Mountains</sky>
+  </photostudio>
 </openrocket>
