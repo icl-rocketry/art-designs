@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<openrocket version="1.6" creator="OpenRocket 15.03">
+<openrocket version="1.8" creator="OpenRocket 20-11-alpha-16">
   <rocket>
     <name>Rocket</name>
+    <axialoffset method="absolute">0.0</axialoffset>
     <comment>Goal height needs to be 3220m or thereabout --&gt; Provides a 400 ft buffer on record.</comment>
     <revision>Updated to include interfacing, needs to include drogue dimensions and manipulate stability.</revision>
     <motorconfiguration configid="d11988e2-2f05-4976-958a-c534de073028" default="true"><name>APEX | Cesaroni I216-CL(I)-14</name></motorconfiguration>
@@ -24,7 +25,7 @@ Symbols:
           <nosecone>
             <name>Nose cone (18+3cm) 55g ✓✓</name>
             <appearance>
-            <paint red="255" green="255" blue="255"/>
+            <paint red="255" green="255" blue="255" alpha="255"/>
             <shine>0.3</shine>
             </appearance>
             <overridemass>0.09</overridemass>
@@ -50,7 +51,7 @@ Mass increase 55-&gt;90g 28/08</comment>
             <subcomponents>
               <masscomponent>
                 <name>Electronics Bay (PNUT) ✓</name>
-                <position type="absolute">0.11900000000000001</position>
+                <axialoffset method="absolute">0.11900000000000001</axialoffset>
                 <overridemass>0.02</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>PNUT altimeter
@@ -67,28 +68,27 @@ Mass verified from component used for ASTRA</comment>
               <masscomponent>
                 <name>PNUT Retention ✓✓</name>
                 <appearance>
-                <paint red="1" green="1" blue="1"/>
+                <paint red="1" green="1" blue="1" alpha="255"/>
                 <shine>0.0</shine>
-                <decal name="/datafiles/textures/wadding.png" rotation="0.0" edgemode="REPEAT">
-                <center x="0.0" y="0.0"/>
-                <offset x="0.0" y="0.0"/>
-                <scale x="1.0" y="1.0"/>
-                </decal>
                 </appearance>
-                <position type="absolute">0.2</position>
+                <axialoffset method="absolute">0.2</axialoffset>
+                <overridemass>0.0</overridemass>
+                <overridesubcomponents>false</overridesubcomponents>
                 <comment>Holds avionics PNUT in place using dowel and 3D printed support
 Mass small - likely ~2g</comment>
                 <packedlength>0.01</packedlength>
                 <packedradius>0.0175</packedradius>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <mass>0.002</mass>
+                <mass>0.0</mass>
                 <masscomponenttype>payload</masscomponenttype>
               </masscomponent>
 
               <masscomponent>
                 <name>Liquid Gravity ⬆✓✓</name>
-                <position type="top">0.030999999999999996</position>
+                <axialoffset method="top">0.030999999999999996</axialoffset>
+                <overridemass>0.0</overridemass>
+                <overridesubcomponents>false</overridesubcomponents>
                 <comment>Mass optimised along with fin size
 
 ⚠ Review 28/08</comment>
@@ -96,7 +96,7 @@ Mass small - likely ~2g</comment>
                 <packedradius>0.0025</packedradius>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <mass>0.04</mass>
+                <mass>0.0</mass>
                 <masscomponenttype>masscomponent</masscomponenttype>
               </masscomponent>
             </subcomponents>
@@ -118,7 +118,7 @@ Mass small - likely ~2g</comment>
             <subcomponents>
               <masscomponent>
                 <name>Custom Avionics Bay ⚠</name>
-                <position type="absolute">0.21</position>
+                <axialoffset method="absolute">0.21</axialoffset>
                 <overridemass>0.048</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Mass verified with manufactured part
@@ -134,7 +134,7 @@ Mass small - likely ~2g</comment>
 
               <masscomponent>
                 <name>Speaker (Avionics) ✓</name>
-                <position type="top">0.1</position>
+                <axialoffset method="top">0.1</axialoffset>
                 <comment>Avionics bay speaker for location of rocket after recovery
 Mass verified using data sheet</comment>
                 <packedlength>0.015</packedlength>
@@ -147,7 +147,7 @@ Mass verified using data sheet</comment>
 
               <tubecoupler>
                 <name>Upper Upper BT Shoulder ✓✓</name>
-                <position type="bottom">0.02</position>
+                <axialoffset method="bottom">0.02</axialoffset>
                 <overridemass>0.06</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Attaches body tube 1 to body tube 2
@@ -178,7 +178,9 @@ Mass &amp; CG accounted for in Body Tube 1
             <subcomponents>
               <bulkhead>
                 <name>Bulkhead ✓</name>
-                <position type="bottom">-0.20500000000000004</position>
+                <instancecount>1</instancecount>
+                <instanceseparation>0.0</instanceseparation>
+                <axialoffset method="bottom">-0.20500000000000004</axialoffset>
                 <overridemass>0.011</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Bulkhead to hold Recovery eye-bolt
@@ -192,7 +194,7 @@ Mass verified with manufactured component</comment>
 
               <innertube>
                 <name>Recovery Bay (19.5cm | 0g) ✓</name>
-                <position type="bottom">-0.01</position>
+                <axialoffset method="bottom">-0.01</axialoffset>
                 <overridemass>0.0</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Recovery bay bounds (this does NOT represent a physical component - it is only to be used for positioning of the recovery bay)</comment>
@@ -209,7 +211,7 @@ Mass verified with manufactured component</comment>
                 <subcomponents>
                   <masscomponent>
                     <name>Metal plate ✓</name>
-                    <position type="top">-0.019</position>
+                    <axialoffset method="top">-0.019</axialoffset>
                     <overridemass>0.0031000000000000003</overridemass>
                     <overridesubcomponents>false</overridesubcomponents>
                     <comment>Secured shock chord &amp; prevents damage to bulkhead
@@ -224,7 +226,7 @@ Mass small</comment>
 
                   <parachute>
                     <name>Main Parachute (300m) ✓</name>
-                    <position type="top">0.0</position>
+                    <axialoffset method="top">0.0</axialoffset>
                     <overridemass>0.045</overridemass>
                     <overridesubcomponents>false</overridesubcomponents>
                     <comment>Fruity Chutes 24&quot; elliptical chute (https://shop.fruitychutes.com/products/24-elliptical-parachute-2-2lb-20fps)
@@ -246,7 +248,7 @@ Mass &amp; performance validated with ASTRA</comment>
 
                   <masscomponent>
                     <name>Swivel (anti-tangle) ✓</name>
-                    <position type="top">0.09999999999999987</position>
+                    <axialoffset method="top">0.09999999999999987</axialoffset>
                     <overridemass>0.05</overridemass>
                     <overridesubcomponents>false</overridesubcomponents>
                     <comment>Specs confirmed by recovery
@@ -263,7 +265,7 @@ Mass 50g 28/08</comment>
 
                   <streamer>
                     <name>Streamer (Apogee) ✓</name>
-                    <position type="top">0.040000000000000036</position>
+                    <axialoffset method="top">0.040000000000000036</axialoffset>
                     <overridemass>0.0135</overridemass>
                     <overridesubcomponents>false</overridesubcomponents>
                     <comment>Specs confirmed by recovery</comment>
@@ -282,7 +284,7 @@ Mass 50g 28/08</comment>
 
                   <masscomponent>
                     <name>Chute Release ✓</name>
-                    <position type="top">0.020000000000000018</position>
+                    <axialoffset method="top">0.020000000000000018</axialoffset>
                     <overridemass>0.0175</overridemass>
                     <overridesubcomponents>false</overridesubcomponents>
                     <comment>Mass verified with ASTRA component</comment>
@@ -296,7 +298,7 @@ Mass 50g 28/08</comment>
 
                   <shockcord>
                     <name>Shock cord ✓</name>
-                    <position type="top">0.030000000000000044</position>
+                    <axialoffset method="top">0.030000000000000044</axialoffset>
                     <comment>Specs confirmed by recovery</comment>
                     <packedlength>0.165</packedlength>
                     <packedradius>0.0025</packedradius>
@@ -310,7 +312,7 @@ Mass 50g 28/08</comment>
 
               <tubecoupler>
                 <name>Tube coupler ✓✓</name>
-                <position type="bottom">0.05099999999999999</position>
+                <axialoffset method="bottom">0.05099999999999999</axialoffset>
                 <overridemass>0.033</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Mass verified with manufactured part
@@ -343,7 +345,7 @@ Mass increase 27-&gt;33g 28/08</comment>
             <subcomponents>
               <masscomponent>
                 <name>U-Bolt ✓</name>
-                <position type="top">0.014000000000000021</position>
+                <axialoffset method="top">0.014000000000000021</axialoffset>
                 <overridemass>0.0070999999999999995</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Secures recovery hardware
@@ -358,7 +360,7 @@ Mass verified</comment>
 
               <masscomponent>
                 <name>Ejectection Charge ✓✓</name>
-                <position type="middle">-0.15749999999999995</position>
+                <axialoffset method="middle">-0.15749999999999995</axialoffset>
                 <comment>Ignited by the motor (14s delay)
 Causes upper body assembly to detach for recovery device deployment
 
@@ -373,7 +375,9 @@ Note streamer deployment BEFORE apogee due to motor timing</comment>
 
               <bulkhead>
                 <name>Thrust Ring ✓✓</name>
-                <position type="top">0.055000000000000056</position>
+                <instancecount>1</instancecount>
+                <instanceseparation>0.0</instanceseparation>
+                <axialoffset method="top">0.055000000000000056</axialoffset>
                 <overridemass>0.008</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Note diameter matches internal body tube diameter
@@ -387,7 +391,9 @@ Mass verified with manufactured component</comment>
 
               <centeringring>
                 <name>Centering ring ✓✓</name>
-                <position type="absolute">0.6759999999999999</position>
+                <instancecount>1</instancecount>
+                <instanceseparation>0.0</instanceseparation>
+                <axialoffset method="absolute">0.6759999999999999</axialoffset>
                 <overridemass>0.0</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>OD matches ID of body tube
@@ -402,7 +408,7 @@ Mass small</comment>
 
               <innertube>
                 <name>Motor Case - 164g 5 grain case ✓✓</name>
-                <position type="bottom">0.015</position>
+                <axialoffset method="bottom">0.015</axialoffset>
                 <overridemass>0.182</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Mass verified using 5-grain case
@@ -426,17 +432,21 @@ Mass changed 164-&gt;182g 28/08</comment>
                     <type>reload</type>
                     <manufacturer>Cesaroni Technology</manufacturer>
                     <digest>24aee394988e2a8f87dea040e9ca7dfa</digest>
-                    <designation>I216-CL(I)</designation>
+                    <designation>I216</designation>
                     <diameter>0.038</diameter>
                     <length>0.367</length>
                     <delay>14.0</delay>
                   </motor>
+                  <ignitionconfiguration configid="d11988e2-2f05-4976-958a-c534de073028">
+                    <ignitionevent>automatic</ignitionevent>
+                    <ignitiondelay>0.0</ignitiondelay>
+                  </ignitionconfiguration>
                 </motormount>
               </innertube>
 
               <innertube>
                 <name>Motor Tube - 17.2g ✓✓</name>
-                <position type="bottom">0.015</position>
+                <axialoffset method="bottom">0.015</axialoffset>
                 <overridemass>0.0</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>⚠ Mass included in part-assembly 28/08 -&gt; Added another 17g here (but possibly not due to this component!)</comment>
@@ -453,7 +463,9 @@ Mass changed 164-&gt;182g 28/08</comment>
 
               <centeringring>
                 <name>Centering ring ✓✓</name>
-                <position type="absolute">0.827</position>
+                <instancecount>1</instancecount>
+                <instanceseparation>0.0</instanceseparation>
+                <axialoffset method="absolute">0.827</axialoffset>
                 <overridemass>0.0</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <material type="bulk" density="680.0">Cardboard</material>
@@ -466,15 +478,16 @@ Mass changed 164-&gt;182g 28/08</comment>
 
               <freeformfinset>
                 <name>Freeform fin set ✓✓</name>
-                <position type="bottom">0.01</position>
+                <instancecount>3</instancecount>
+                <radiusoffset method="surface">0.0</radiusoffset>
+                <angleoffset method="relative">0.0</angleoffset>
+                <axialoffset method="bottom">0.01</axialoffset>
                 <overridemass>0.017794332952978425</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Optimised for 1.2cal stability
 DESIGN FIXED 13.07.2021</comment>
                 <finish>smooth</finish>
                 <material type="bulk" density="2700.0">Aluminum</material>
-                <fincount>3</fincount>
-                <rotation>0.0</rotation>
                 <thickness>0.0025</thickness>
                 <crosssection>rounded</crosssection>
                 <cant>0.0</cant>
@@ -555,7 +568,7 @@ DESIGN FIXED 13.07.2021</comment>
             <subcomponents>
               <engineblock>
                 <name>Motor Retainer  ✓✓</name>
-                <position type="bottom">0.0</position>
+                <axialoffset method="bottom">0.0</axialoffset>
                 <overridemass>0.028</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>https://www.blackcatrocketry.co.uk/products/threaded-motor-retainer?_pos=2&amp;_sid=4ceff2bc0&amp;_ss=r&amp;variant=46030320020
@@ -575,7 +588,7 @@ Verified</comment>
   </rocket>
 
   <simulations>
-    <simulation status="outdated">
+    <simulation status="uptodate">
       <name>APEX</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -593,12 +606,12 @@ Verified</comment>
         <atmosphere model="isa"/>
         <timestep>0.05</timestep>
       </conditions>
-      <flightdata maxaltitude="2881.3" maxvelocity="364.86" maxacceleration="211.76" maxmach="1.0786" timetoapogee="20.597" flighttime="131.3" groundhitvelocity="6.5301" launchrodvelocity="34.994" deploymentvelocity="36.316">
-        <warning>Recovery device deployment at high speed (45.9 m/s)</warning>
+      <flightdata maxaltitude="2875.1" maxvelocity="364.46" maxacceleration="211.58" maxmach="1.0774" timetoapogee="20.351" flighttime="20.453" launchrodvelocity="34.928" deploymentvelocity="46.212">
+        <warning>Recovery device deployment at high speed (46.2 m/s)</warning>
       </flightdata>
     </simulation>
 
-    <simulation status="outdated">
+    <simulation status="cantrun">
       <name>1º Launch</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -621,7 +634,7 @@ Verified</comment>
       </flightdata>
     </simulation>
 
-    <simulation status="outdated">
+    <simulation status="cantrun">
       <name>2º Launch</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -644,7 +657,7 @@ Verified</comment>
       </flightdata>
     </simulation>
 
-    <simulation status="outdated">
+    <simulation status="cantrun">
       <name>-2º Launch</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>

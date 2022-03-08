@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<openrocket version="1.4" creator="OpenRocket 15.03">
+<openrocket version="1.8" creator="OpenRocket 20-11-alpha-16">
   <rocket>
     <name>Rocket</name>
+    <axialoffset method="absolute">0.0</axialoffset>
     <motorconfiguration configid="2ce85470-a1bb-4c8c-bf8c-57bc7cba8621" default="true"/>
     <referencetype>maximum</referencetype>
 
@@ -27,7 +28,7 @@
             <subcomponents>
               <masscomponent>
                 <name>Avionics</name>
-                <position type="bottom">-8.881784197001253E-18</position>
+                <axialoffset method="bottom">-8.881784197001253E-18</axialoffset>
                 <packedlength>0.12</packedlength>
                 <packedradius>0.03</packedradius>
                 <radialposition>0.0</radialposition>
@@ -49,7 +50,7 @@
             <subcomponents>
               <shockcord>
                 <name>Shock cord</name>
-                <position type="top">0.02</position>
+                <axialoffset method="top">0.02</axialoffset>
                 <packedlength>0.025</packedlength>
                 <packedradius>0.0275</packedradius>
                 <radialposition>0.0</radialposition>
@@ -60,7 +61,7 @@
 
               <streamer>
                 <name>Streamer</name>
-                <position type="top">0.045</position>
+                <axialoffset method="top">0.045</axialoffset>
                 <packedlength>0.06</packedlength>
                 <packedradius>0.035</packedradius>
                 <radialposition>0.0</radialposition>
@@ -76,7 +77,7 @@
 
               <parachute>
                 <name>Parachute</name>
-                <position type="top">0.105</position>
+                <axialoffset method="top">0.105</axialoffset>
                 <packedlength>0.22</packedlength>
                 <packedradius>0.027999999999999997</packedradius>
                 <radialposition>0.0</radialposition>
@@ -108,18 +109,22 @@
               <motor configid="2ce85470-a1bb-4c8c-bf8c-57bc7cba8621">
                 <type>reload</type>
                 <manufacturer>Cesaroni Technology</manufacturer>
-                <digest>ca8d67d7d18d42c2e5941ee493971ebd</digest>
+                <digest>c7d7ec5229587aafa881eff1c25ad0e4</digest>
                 <designation>L1115</designation>
                 <diameter>0.075</diameter>
                 <length>0.621</length>
                 <delay>0.0</delay>
               </motor>
+              <ignitionconfiguration configid="2ce85470-a1bb-4c8c-bf8c-57bc7cba8621">
+                <ignitionevent>automatic</ignitionevent>
+                <ignitiondelay>0.0</ignitiondelay>
+              </ignitionconfiguration>
             </motormount>
 
             <subcomponents>
               <engineblock>
                 <name>Engine block</name>
-                <position type="top">0.0</position>
+                <axialoffset method="top">0.0</axialoffset>
                 <material type="bulk" density="630.0">Plywood (birch)</material>
                 <length>0.005</length>
                 <radialposition>0.0</radialposition>
@@ -130,7 +135,7 @@
 
               <tubecoupler>
                 <name>Coupler</name>
-                <position type="top">-0.04</position>
+                <axialoffset method="top">-0.04</axialoffset>
                 <material type="bulk" density="680.0">Cardboard</material>
                 <length>0.08</length>
                 <radialposition>0.0</radialposition>
@@ -141,7 +146,9 @@
 
               <centeringring>
                 <name>Centering ring</name>
-                <position type="middle">0.0</position>
+                <instancecount>1</instancecount>
+                <instanceseparation>0.0</instanceseparation>
+                <axialoffset method="middle">0.0</axialoffset>
                 <material type="bulk" density="630.0">Plywood (birch)</material>
                 <length>0.002</length>
                 <radialposition>0.0</radialposition>
@@ -152,7 +159,7 @@
 
               <innertube>
                 <name>Inner Tube</name>
-                <position type="bottom">-0.02</position>
+                <axialoffset method="bottom">-0.02</axialoffset>
                 <material type="bulk" density="680.0">Cardboard</material>
                 <length>0.618</length>
                 <radialposition>0.0</radialposition>
@@ -166,7 +173,7 @@
 
               <engineblock>
                 <name>Motor Retainer</name>
-                <position type="bottom">0.0</position>
+                <axialoffset method="bottom">0.0</axialoffset>
                 <material type="bulk" density="630.0">Plywood (birch)</material>
                 <length>0.02</length>
                 <radialposition>0.0</radialposition>
@@ -177,17 +184,18 @@
 
               <trapezoidfinset>
                 <name>Fins</name>
-                <position type="bottom">0.02</position>
+                <instancecount>3</instancecount>
+                <radiusoffset method="surface">0.0</radiusoffset>
+                <angleoffset method="relative">0.0</angleoffset>
+                <axialoffset method="bottom">0.02</axialoffset>
                 <finish>polished</finish>
                 <material type="bulk" density="2700.0">Aluminum</material>
-                <fincount>3</fincount>
-                <rotation>0.0</rotation>
                 <thickness>0.003</thickness>
                 <crosssection>rounded</crosssection>
                 <cant>0.0</cant>
                 <tabheight>0.01</tabheight>
                 <tablength>0.05</tablength>
-                <tabposition relativeto="center">0.0</tabposition>
+                <tabposition relativeto="middle">0.0</tabposition>
                 <filletradius>0.0</filletradius>
                 <filletmaterial type="bulk" density="2700.0">Aluminum</filletmaterial>
                 <rootchord>0.17</rootchord>
@@ -221,9 +229,8 @@
         <atmosphere model="isa"/>
         <timestep>0.05</timestep>
       </conditions>
-      <flightdata maxaltitude="5898.8" maxvelocity="620.27" maxacceleration="239.4" maxmach="1.8538" timetoapogee="28.639" flighttime="317.21" groundhitvelocity="7.5065" launchrodvelocity="37.68" deploymentvelocity="74.243">
+      <flightdata maxaltitude="5747.8" maxvelocity="612.43" maxacceleration="239.58" maxmach="1.8296" timetoapogee="28.39" flighttime="28.49" launchrodvelocity="36.26">
         <warning>Body calculations may not be entirely accurate at supersonic speeds.</warning>
-        <warning>Recovery device deployment at high speed (50.4 m/s)</warning>
       </flightdata>
     </simulation>
   </simulations>
