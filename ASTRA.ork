@@ -12,21 +12,6 @@
 
         <subcomponents>
           <nosecone>
-<<<<<<< HEAD
-            <name>Nose cone</name>
-            <finish>normal</finish>
-            <material type="bulk" density="950.0">Kraft phenolic</material>
-            <length>0.24999999999999997</length>
-            <thickness>0.0019999999999999996</thickness>
-            <shape>power</shape>
-            <shapeclipped>false</shapeclipped>
-            <shapeparameter>0.5</shapeparameter>
-            <aftradius>0.04</aftradius>
-            <aftshoulderradius>0.0</aftshoulderradius>
-            <aftshoulderlength>0.0</aftshoulderlength>
-            <aftshoulderthickness>0.0</aftshoulderthickness>
-            <aftshouldercapped>false</aftshouldercapped>
-=======
             <name>Nose cone PLA - mass underestimate</name>
             <finish>smooth</finish>
             <material type="bulk" density="1250.0">PLA</material>
@@ -97,62 +82,17 @@
                 <masscomponenttype>masscomponent</masscomponenttype>
               </masscomponent>
             </subcomponents>
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
           </nosecone>
 
           <bodytube>
             <name>Body tube</name>
-<<<<<<< HEAD
-            <finish>normal</finish>
-            <material type="bulk" density="950.0">Kraft phenolic</material>
-            <length>0.48</length>
-=======
             <finish>smooth</finish>
             <material type="bulk" density="1200.0">Polycarbonate (Lexan)</material>
             <length>0.455</length>
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
             <thickness>0.002</thickness>
             <radius>auto</radius>
 
             <subcomponents>
-<<<<<<< HEAD
-              <parachute>
-                <name>Parachute</name>
-                <axialoffset method="bottom">0.0</axialoffset>
-                <packedlength>0.12499999999999999</packedlength>
-                <packedradius>0.0225</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <cd>0.8</cd>
-                <material type="surface" density="0.067">Ripstop nylon</material>
-                <deployevent>ejection</deployevent>
-                <deployaltitude>200.0</deployaltitude>
-                <deploydelay>0.0</deploydelay>
-                <diameter>0.8</diameter>
-                <linecount>40</linecount>
-                <linelength>0.21999999999999997</linelength>
-                <linematerial type="line" density="0.0018">Elastic cord (round 2 mm, 1/16 in)</linematerial>
-              </parachute>
-
-              <shockcord>
-                <name>Shock cord</name>
-                <axialoffset method="bottom">-0.09</axialoffset>
-                <packedlength>0.03499999999999999</packedlength>
-                <packedradius>0.0325</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <cordlength>0.4</cordlength>
-                <material type="line" density="0.0018">Elastic cord (round 2 mm, 1/16 in)</material>
-              </shockcord>
-
-              <bulkhead>
-                <name>Bulkhead</name>
-                <instancecount>1</instancecount>
-                <instanceseparation>0.0</instanceseparation>
-                <axialoffset method="bottom">-0.125</axialoffset>
-                <material type="bulk" density="950.0">Kraft phenolic</material>
-                <length>0.01</length>
-=======
               <masscomponent>
                 <name>Avionics (google pixel 2) --&gt; Need to add Pi Zero Mass to 143 g Pixel 2 Mass) + 25 g for Li-Po</name>
                 <axialoffset method="top">0.08</axialoffset>
@@ -182,33 +122,11 @@
                 <axialoffset method="top">0.25799999999999995</axialoffset>
                 <material type="bulk" density="680.0">Cardboard</material>
                 <length>0.015</length>
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
                 <outerradius>auto</outerradius>
               </bulkhead>
 
-<<<<<<< HEAD
-              <tubecoupler>
-                <name>Tube coupler</name>
-                <axialoffset method="top">3.552713678800501E-17</axialoffset>
-                <material type="bulk" density="950.0">Kraft phenolic</material>
-                <length>0.06</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>auto</outerradius>
-                <thickness>0.003</thickness>
-              </tubecoupler>
-
-              <masscomponent>
-                <name>Recovery </name>
-                <axialoffset method="top">0.27</axialoffset>
-                <packedlength>0.2</packedlength>
-                <packedradius>0.035</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.0</mass>
-=======
               <freeformfinset>
                 <name>Freeform fin set</name>
                 <instancecount>1</instancecount>
@@ -238,21 +156,10 @@
                 <radialposition>0.055</radialposition>
                 <radialdirection>0.0</radialdirection>
                 <mass>0.003</mass>
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
                 <masscomponenttype>masscomponent</masscomponenttype>
               </masscomponent>
 
               <masscomponent>
-<<<<<<< HEAD
-                <name>Avionics</name>
-                <axialoffset method="top">0.0</axialoffset>
-                <packedlength>0.15</packedlength>
-                <packedradius>0.035</packedradius>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <mass>0.1</mass>
-                <masscomponenttype>masscomponent</masscomponenttype>
-=======
                 <name>Separation Avionics</name>
                 <axialoffset method="top">0.239</axialoffset>
                 <packedlength>0.02</packedlength>
@@ -261,7 +168,6 @@
                 <radialdirection>0.0</radialdirection>
                 <mass>0.05</mass>
                 <masscomponenttype>flightcomputer</masscomponenttype>
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
               </masscomponent>
             </subcomponents>
           </bodytube>
@@ -269,69 +175,6 @@
           <bodytube>
             <name>Body tube</name>
             <finish>normal</finish>
-<<<<<<< HEAD
-            <material type="bulk" density="950.0">Kraft phenolic</material>
-            <length>0.44</length>
-            <thickness>0.0020000000000000018</thickness>
-            <radius>0.04</radius>
-            <motormount>
-              <ignitionevent>automatic</ignitionevent>
-              <ignitiondelay>0.0</ignitiondelay>
-              <overhang>0.0</overhang>
-              <motor configid="1194bbae-239c-4717-8d67-b9e95bdb6680">
-                <type>reload</type>
-                <manufacturer>Cesaroni Technology</manufacturer>
-                <digest>24aee394988e2a8f87dea040e9ca7dfa</digest>
-                <designation>I216</designation>
-                <diameter>0.038</diameter>
-                <length>0.367</length>
-                <delay>14.0</delay>
-              </motor>
-              <ignitionconfiguration configid="1194bbae-239c-4717-8d67-b9e95bdb6680">
-                <ignitionevent>automatic</ignitionevent>
-                <ignitiondelay>0.0</ignitiondelay>
-              </ignitionconfiguration>
-            </motormount>
-
-            <subcomponents>
-              <engineblock>
-                <name>Engine block</name>
-                <axialoffset method="bottom">-0.0</axialoffset>
-                <material type="bulk" density="950.0">Kraft phenolic</material>
-                <length>0.01</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>0.0355</outerradius>
-                <thickness>0.0</thickness>
-              </engineblock>
-
-              <ellipticalfinset>
-                <name>Elliptical fin set</name>
-                <instancecount>3</instancecount>
-                <radiusoffset method="surface">0.0</radiusoffset>
-                <angleoffset method="relative">0.0</angleoffset>
-                <axialoffset method="bottom">0.0</axialoffset>
-                <finish>normal</finish>
-                <material type="bulk" density="950.0">Kraft phenolic</material>
-                <thickness>0.003</thickness>
-                <crosssection>square</crosssection>
-                <cant>0.0</cant>
-                <filletradius>0.0</filletradius>
-                <filletmaterial type="bulk" density="950.0">Kraft phenolic</filletmaterial>
-                <rootchord>0.11000000000000006</rootchord>
-                <height>0.08899999999999995</height>
-              </ellipticalfinset>
-
-              <innertube>
-                <name>Inner Tube</name>
-                <axialoffset method="bottom">0.0</axialoffset>
-                <material type="bulk" density="950.0">Kraft phenolic</material>
-                <length>0.37</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>0.0245</outerradius>
-                <thickness>5.000000000000004E-4</thickness>
-=======
             <material type="bulk" density="1850.0">Fiberglass</material>
             <length>0.03</length>
             <thickness>0.002</thickness>
@@ -511,7 +354,6 @@
                 <radialdirection>0.0</radialdirection>
                 <outerradius>0.029500000000000002</outerradius>
                 <thickness>0.0</thickness>
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
                 <clusterconfiguration>single</clusterconfiguration>
                 <clusterscale>1.0</clusterscale>
                 <clusterrotation>0.0</clusterrotation>
@@ -550,18 +392,6 @@
                 </subcomponents>
               </innertube>
 
-<<<<<<< HEAD
-              <tubecoupler>
-                <name>Tube coupler</name>
-                <axialoffset method="bottom">-0.38</axialoffset>
-                <material type="bulk" density="950.0">Kraft phenolic</material>
-                <length>0.06</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>auto</outerradius>
-                <thickness>0.0</thickness>
-              </tubecoupler>
-=======
               <innertube>
                 <name>Motor Tube</name>
                 <axialoffset method="top">0.163</axialoffset>
@@ -693,7 +523,6 @@
                 <sweeplength>0.06999999999999999</sweeplength>
                 <height>0.075</height>
               </trapezoidfinset>
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
             </subcomponents>
           </bodytube>
         </subcomponents>
@@ -720,13 +549,6 @@
         <atmosphere model="isa"/>
         <timestep>0.05</timestep>
       </conditions>
-<<<<<<< HEAD
-      <flightdata maxaltitude="1404.6" maxvelocity="290.35" maxacceleration="217.15" maxmach="0.85722" timetoapogee="13.711" flighttime="13.811" launchrodvelocity="20.032">
-      </flightdata>
-    </simulation>
-
-    <simulation status="outdated">
-=======
       <flightdata maxaltitude="918.91" maxvelocity="136.27" maxacceleration="77.991" maxmach="0.40158" timetoapogee="14.05" flighttime="14.15" launchrodvelocity="11.91">
         <warning>Thick fins may not be modeled accurately.</warning>
         <databranch name="Sustainer" optimumAltitude="918.9127412187947" timeToOptimumAltitude="14.15000000000007" types="Time,Altitude,Vertical velocity,Vertical acceleration,Total velocity,Total acceleration,Position East of launch,Position North of launch,Lateral distance,Lateral direction,Lateral velocity,Lateral acceleration,Latitude,Longitude,Gravitational acceleration,Angle of attack,Roll rate,Pitch rate,Yaw rate,Mass,Motor mass,Longitudinal moment of inertia,Rotational moment of inertia,CP location,CG location,Stability margin calibers,Mach number,Reynolds number,Thrust,Drag force,Drag coefficient,Axial drag coefficient,Friction drag coefficient,Pressure drag coefficient,Base drag coefficient,Normal force coefficient,Pitch moment coefficient,Yaw moment coefficient,Side force coefficient,Roll moment coefficient,Roll forcing coefficient,Roll damping coefficient,Pitch damping coefficient,Coriolis acceleration,Reference length,Reference area,Vertical orientation (zenith),Lateral orientation (azimuth),Wind velocity,Air temperature,Air pressure,Speed of sound,Simulation time step,Computation time">
@@ -1043,7 +865,6 @@
     </simulation>
 
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 2</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1065,11 +886,7 @@
       </flightdata>
     </simulation>
 
-<<<<<<< HEAD
-    <simulation status="outdated">
-=======
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 3</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1092,11 +909,7 @@
       </flightdata>
     </simulation>
 
-<<<<<<< HEAD
-    <simulation status="outdated">
-=======
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 5</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1119,11 +932,7 @@
       </flightdata>
     </simulation>
 
-<<<<<<< HEAD
-    <simulation status="outdated">
-=======
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 6</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1146,11 +955,7 @@
       </flightdata>
     </simulation>
 
-<<<<<<< HEAD
-    <simulation status="outdated">
-=======
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 7</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1173,11 +978,7 @@
       </flightdata>
     </simulation>
 
-<<<<<<< HEAD
-    <simulation status="outdated">
-=======
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 8</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1200,11 +1001,7 @@
       </flightdata>
     </simulation>
 
-<<<<<<< HEAD
-    <simulation status="outdated">
-=======
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 9</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1227,11 +1024,7 @@
       </flightdata>
     </simulation>
 
-<<<<<<< HEAD
-    <simulation status="outdated">
-=======
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 10</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1254,11 +1047,7 @@
       </flightdata>
     </simulation>
 
-<<<<<<< HEAD
-    <simulation status="outdated">
-=======
     <simulation status="cantrun">
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
       <name>Simulation 11</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
@@ -1279,8 +1068,7 @@
       <flightdata maxaltitude="788.34" maxvelocity="194.27" maxacceleration="343.23" maxmach="0.57138" timetoapogee="11.232" flighttime="118.67" groundhitvelocity="6.7521" launchrodvelocity="26.268" deploymentvelocity="35.643">
         <warning>Recovery device deployment at high speed (35.7 m/s)</warning>
       </flightdata>
-<<<<<<< HEAD
-=======
+      
     </simulation>
 
     <simulation status="outdated">
@@ -1902,7 +1690,6 @@
           <datapoint>102.93,0,0,0,0,0,-75.806,0.048749,75.806,3.1409,0,0,0.49934,-1.4067,9.7922,NaN,NaN,NaN,NaN,3.2189,0,NaN,NaN,NaN,NaN,NaN,0,Inf,0,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,0,NaN,NaN,NaN,NaN,1.8473,288.15,101325,340.39,1.7977e308,0.16514</datapoint>
         </databranch>
       </flightdata>
->>>>>>> 4cf8226b327717b60cf25a1833a92bb37dfdd2a2
     </simulation>
   </simulations>
   <photostudio>
