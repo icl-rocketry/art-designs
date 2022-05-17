@@ -28,7 +28,7 @@ Symbols:
             <paint red="255" green="255" blue="255" alpha="255"/>
             <shine>0.3</shine>
             </appearance>
-            <overridemass>0.09</overridemass>
+            <overridemass>0.06797</overridemass>
             <overridesubcomponents>false</overridesubcomponents>
             <comment>3D Printed - Base mass/CG verified at 55g/128mm from manufactured component
 Weighted for stability (https://deluxematerials.co.uk/products/liquid-gravity) - see &#39;Liquid Gravity&#39; component
@@ -103,15 +103,13 @@ Mass small - likely ~2g</comment>
           </nosecone>
 
           <bodytube>
-            <name>Body Tube 1 (8.5 + 3cm) ✓✓</name>
-            <overridemass>0.036000000000000004</overridemass>
+            <name>Body Tube 2 (18cm) ✓✓</name>
+            <overridemass>0.1546</overridemass>
             <overridesubcomponents>false</overridesubcomponents>
-            <comment>CG to be offset and verified ater printing to account for shoulder (represented as coupler part)
-
-⚠ Upper body assembly 166g 28/08</comment>
+            <comment>Fibreglass body tube - 310g/m</comment>
             <finish>smooth</finish>
-            <material type="bulk" density="1190.0">Acrylic</material>
-            <length>0.085</length>
+            <material type="bulk" density="1850.0">Fiberglass</material>
+            <length>0.34</length>
             <thickness>0.0015000000000000013</thickness>
             <radius>0.023</radius>
 
@@ -124,7 +122,7 @@ Mass small - likely ~2g</comment>
                 <comment>Mass verified with manufactured part
 
 ⚠ Waiting to verify 28/08</comment>
-                <packedlength>0.073</packedlength>
+                <packedlength>0.055999999999999994</packedlength>
                 <packedradius>0.023</packedradius>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
@@ -133,55 +131,22 @@ Mass small - likely ~2g</comment>
               </masscomponent>
 
               <masscomponent>
-                <name>Speaker (Avionics) ✓</name>
-                <axialoffset method="top">0.1</axialoffset>
-                <comment>Avionics bay speaker for location of rocket after recovery
-Mass verified using data sheet</comment>
-                <packedlength>0.015</packedlength>
-                <packedradius>0.0175</packedradius>
+                <name>Vodaphone curve</name>
+                <axialoffset method="top">0.09</axialoffset>
+                <packedlength>0.016</packedlength>
+                <packedradius>0.021</packedradius>
                 <radialposition>0.0</radialposition>
                 <radialdirection>0.0</radialdirection>
-                <mass>0.008</mass>
-                <masscomponenttype>tracker</masscomponenttype>
+                <mass>0.0275</mass>
+                <masscomponenttype>flightcomputer</masscomponenttype>
               </masscomponent>
 
-              <tubecoupler>
-                <name>Upper Upper BT Shoulder ✓✓</name>
-                <axialoffset method="bottom">0.02</axialoffset>
-                <overridemass>0.06</overridemass>
-                <overridesubcomponents>false</overridesubcomponents>
-                <comment>Attaches body tube 1 to body tube 2
-Mass &amp; CG accounted for in Body Tube 1
-
-⚠ Mass added to account for upper BT discrepancy 28/08</comment>
-                <material type="bulk" density="680.0">Cardboard</material>
-                <length>0.05</length>
-                <radialposition>0.0</radialposition>
-                <radialdirection>0.0</radialdirection>
-                <outerradius>auto</outerradius>
-                <thickness>0.0019999999999999983</thickness>
-              </tubecoupler>
-            </subcomponents>
-          </bodytube>
-
-          <bodytube>
-            <name>Body Tube 2 (18cm) ✓✓</name>
-            <overridemass>0.055799999999999995</overridemass>
-            <overridesubcomponents>false</overridesubcomponents>
-            <comment>Fibreglass body tube - 310g/m</comment>
-            <finish>smooth</finish>
-            <material type="bulk" density="1850.0">Fiberglass</material>
-            <length>0.255</length>
-            <thickness>0.0015000000000000013</thickness>
-            <radius>0.023</radius>
-
-            <subcomponents>
               <bulkhead>
                 <name>Bulkhead ✓</name>
                 <instancecount>1</instancecount>
                 <instanceseparation>0.0</instanceseparation>
                 <axialoffset method="bottom">-0.20500000000000004</axialoffset>
-                <overridemass>0.011</overridemass>
+                <overridemass>0.008</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Bulkhead to hold Recovery eye-bolt
 Mass verified with manufactured component</comment>
@@ -309,11 +274,24 @@ Mass 50g 28/08</comment>
                   </shockcord>
                 </subcomponents>
               </innertube>
+            </subcomponents>
+          </bodytube>
 
+          <bodytube>
+            <name>Coupler</name>
+            <overridemass>0.003</overridemass>
+            <overridesubcomponents>false</overridesubcomponents>
+            <finish>normal</finish>
+            <material type="bulk" density="680.0">Cardboard</material>
+            <length>0.02</length>
+            <thickness>0.002</thickness>
+            <radius>auto</radius>
+
+            <subcomponents>
               <tubecoupler>
                 <name>Tube coupler ✓✓</name>
-                <axialoffset method="bottom">0.05099999999999999</axialoffset>
-                <overridemass>0.033</overridemass>
+                <axialoffset method="bottom">0.043</axialoffset>
+                <overridemass>0.022</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <comment>Mass verified with manufactured part
 Body separates here for recovery
@@ -606,8 +584,8 @@ Verified</comment>
         <atmosphere model="isa"/>
         <timestep>0.05</timestep>
       </conditions>
-      <flightdata maxaltitude="2875.1" maxvelocity="364.46" maxacceleration="211.58" maxmach="1.0774" timetoapogee="20.351" flighttime="20.453" launchrodvelocity="34.928" deploymentvelocity="46.212">
-        <warning>Recovery device deployment at high speed (46.2 m/s)</warning>
+      <flightdata maxaltitude="2865.4" maxvelocity="366.09" maxacceleration="213.18" maxmach="1.0824" timetoapogee="20.336" flighttime="20.387" launchrodvelocity="35.167" deploymentvelocity="45.032">
+        <warning>Recovery device deployment at high speed (45 m/s)</warning>
       </flightdata>
     </simulation>
 
@@ -677,6 +655,52 @@ Verified</comment>
       </conditions>
       <flightdata maxaltitude="2884.2" maxvelocity="364.9" maxacceleration="211.76" maxmach="1.0783" timetoapogee="20.618" flighttime="131.64" groundhitvelocity="6.4872" launchrodvelocity="34.996" deploymentvelocity="36.318">
         <warning>Recovery device deployment at high speed (46 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 1</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>d11988e2-2f05-4976-958a-c534de073028</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="2863.9" maxvelocity="362.07" maxacceleration="210.1" maxmach="1.07" timetoapogee="20.415" flighttime="147.91" groundhitvelocity="5.6754" launchrodvelocity="19.612" deploymentvelocity="31.786">
+        <warning>Recovery device deployment at high speed (45.9 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="uptodate">
+      <name>Simulation 2</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>d11988e2-2f05-4976-958a-c534de073028</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>28.61</launchlatitude>
+        <launchlongitude>-80.6</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+      </conditions>
+      <flightdata maxaltitude="2870.9" maxvelocity="366.23" maxacceleration="213.2" maxmach="1.0825" timetoapogee="20.379" flighttime="148.01" groundhitvelocity="5.6072" launchrodvelocity="19.801" deploymentvelocity="31.405">
+        <warning>Recovery device deployment at high speed (45.4 m/s)</warning>
       </flightdata>
     </simulation>
   </simulations>
