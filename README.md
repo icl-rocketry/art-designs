@@ -40,7 +40,7 @@ Flights:
 **Max acceleration:** 213.18 m/s^2 <br/> 
 **Flight duration:** 20.387 s <br/> 
 **Ground hit velocity:** Error parsing simulation data m/s <br/> 
-**Dry mass:** 1.032 kg                    
+**Dry mass:** 1.032 kg                     
 
 <!-- APEX Info End -->
 
