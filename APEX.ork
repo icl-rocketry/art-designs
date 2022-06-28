@@ -214,8 +214,6 @@ Mass &amp; performance validated with ASTRA</comment>
                   <masscomponent>
                     <name>Swivel (anti-tangle) ✓</name>
                     <axialoffset method="top">0.09999999999999987</axialoffset>
-                    <overridemass>0.05</overridemass>
-                    <overridesubcomponents>false</overridesubcomponents>
                     <comment>Specs confirmed by recovery
 Prevents tangling of recovery components
 
@@ -224,7 +222,7 @@ Mass 50g 28/08</comment>
                     <packedradius>0.022000000000000002</packedradius>
                     <radialposition>0.0</radialposition>
                     <radialdirection>0.0</radialdirection>
-                    <mass>0.05</mass>
+                    <mass>0.048369999999999996</mass>
                     <masscomponenttype>recoveryhardware</masscomponenttype>
                   </masscomponent>
 
@@ -250,14 +248,14 @@ Mass 50g 28/08</comment>
                   <masscomponent>
                     <name>Chute Release ✓</name>
                     <axialoffset method="top">0.020000000000000018</axialoffset>
-                    <overridemass>0.0175</overridemass>
+                    <overridemass>0.01932</overridemass>
                     <overridesubcomponents>false</overridesubcomponents>
                     <comment>Mass verified with ASTRA component</comment>
                     <packedlength>0.054000000000000006</packedlength>
                     <packedradius>0.005</packedradius>
                     <radialposition>0.0</radialposition>
                     <radialdirection>0.0</radialdirection>
-                    <mass>0.0175</mass>
+                    <mass>0.01932</mass>
                     <masscomponenttype>recoveryhardware</masscomponenttype>
                   </masscomponent>
 
@@ -574,9 +572,9 @@ Verified</comment>
         <configid>d11988e2-2f05-4976-958a-c534de073028</configid>
         <launchrodlength>3.0</launchrodlength>
         <launchrodangle>0.0</launchrodangle>
-        <launchroddirection>90.0</launchroddirection>
+        <launchroddirection>0.0</launchroddirection>
         <windaverage>4.0</windaverage>
-        <windturbulence>0.24999999999999997</windturbulence>
+        <windturbulence>0.1</windturbulence>
         <launchaltitude>0.0</launchaltitude>
         <launchlatitude>55.726944</launchlatitude>
         <launchlongitude>-4.811111</launchlongitude>
@@ -584,8 +582,9 @@ Verified</comment>
         <atmosphere model="isa"/>
         <timestep>0.05</timestep>
       </conditions>
-      <flightdata maxaltitude="2865.4" maxvelocity="366.09" maxacceleration="213.18" maxmach="1.0824" timetoapogee="20.336" flighttime="20.387" launchrodvelocity="35.167" deploymentvelocity="45.032">
-        <warning>Recovery device deployment at high speed (45 m/s)</warning>
+      <flightdata maxaltitude="2700.5" maxvelocity="384.97" maxacceleration="267.71" maxmach="1.1356" timetoapogee="20.26" flighttime="143.57" groundhitvelocity="5.6547" launchrodvelocity="39.81" deploymentvelocity="31.45">
+        <warning>Body calculations may not be entirely accurate at supersonic speeds.</warning>
+        <warning>Recovery device deployment at high speed (27.9 m/s)</warning>
       </flightdata>
     </simulation>
 
@@ -681,13 +680,13 @@ Verified</comment>
       </flightdata>
     </simulation>
 
-    <simulation status="uptodate">
+    <simulation status="outdated">
       <name>Simulation 2</name>
       <simulator>RK4Simulator</simulator>
       <calculator>BarrowmanCalculator</calculator>
       <conditions>
         <configid>d11988e2-2f05-4976-958a-c534de073028</configid>
-        <launchrodlength>1.0</launchrodlength>
+        <launchrodlength>3.0</launchrodlength>
         <launchrodangle>0.0</launchrodangle>
         <launchroddirection>90.0</launchroddirection>
         <windaverage>2.0</windaverage>
@@ -697,10 +696,33 @@ Verified</comment>
         <launchlongitude>-80.6</launchlongitude>
         <geodeticmethod>spherical</geodeticmethod>
         <atmosphere model="isa"/>
-        <timestep>0.05</timestep>
+        <timestep>0.01</timestep>
       </conditions>
-      <flightdata maxaltitude="2870.9" maxvelocity="366.23" maxacceleration="213.2" maxmach="1.0825" timetoapogee="20.379" flighttime="148.01" groundhitvelocity="5.6072" launchrodvelocity="19.801" deploymentvelocity="31.405">
+      <flightdata maxaltitude="2871.5" maxvelocity="366.27" maxacceleration="220.04" maxmach="1.0825" timetoapogee="20.379" flighttime="148.5" groundhitvelocity="5.5835" launchrodvelocity="33.573" deploymentvelocity="31.406">
         <warning>Recovery device deployment at high speed (45.4 m/s)</warning>
+      </flightdata>
+    </simulation>
+
+    <simulation status="outdated">
+      <name>Simulation 3</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>d11988e2-2f05-4976-958a-c534de073028</configid>
+        <launchrodlength>3.0</launchrodlength>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>0.0</launchroddirection>
+        <windaverage>4.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>55.7</launchlatitude>
+        <launchlongitude>-4.81</launchlongitude>
+        <geodeticmethod>spherical</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.01</timestep>
+      </conditions>
+      <flightdata maxaltitude="2855.3" maxvelocity="366.12" maxacceleration="220.02" maxmach="1.0825" timetoapogee="19.995" flighttime="166.93" groundhitvelocity="5.5777" launchrodvelocity="33.566" deploymentvelocity="25.611">
+        <warning>Recovery device deployment at high speed (45.1 m/s)</warning>
       </flightdata>
     </simulation>
   </simulations>
