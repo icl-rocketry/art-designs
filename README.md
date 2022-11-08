@@ -40,7 +40,7 @@ Flights:
 **Max acceleration:** 213.15 m/s^2 <br/> 
 **Flight duration:** 20.42 s <br/> 
 **Ground hit velocity:** Error parsing simulation data m/s <br/> 
-**Dry mass:** 0.984 kg                         
+**Dry mass:** 0.984 kg            
 
 <!-- APEX Info End -->
 
@@ -58,7 +58,7 @@ L-class motor, apogee ~ 5890m (record: 5716m)
 **Max acceleration:** 239.58 m/s^2 <br/> 
 **Flight duration:** 28.49 s <br/> 
 **Ground hit velocity:** Error parsing simulation data m/s <br/> 
-**Dry mass:** 0.2 kg                         
+**Dry mass:** 0.2 kg 
 
 <!-- ASCENSION Info End -->
 
