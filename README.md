@@ -3,7 +3,7 @@ OpenRocket simulations version control
 
 **All ork files must be unzipped to merge if using OpenRocket**
 
-**[closedrocket](https://github.com/icl-art/closedrocket) MUST be used to make changes to avoid compatibility errors**
+**Make sure that the pre-commit hook found in hooks/ is in .git/hooks, otherwise your .ork files will be weird**
 
 [![README Updated](https://github.com/icl-rocketry/art-designs/actions/workflows/readme_updater.yml/badge.svg)](https://github.com/icl-rocketry/art-designs/actions/workflows/readme_updater.yml)
 
