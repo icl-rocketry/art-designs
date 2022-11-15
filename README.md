@@ -3,7 +3,7 @@ OpenRocket simulations version control
 
 **All ork files must be unzipped to merge if using OpenRocket**
 
-**[closedrocket](https://github.com/icl-art/closedrocket) MUST be used to make changes to avoid compatibility errors**
+**Make sure that the pre-commit hook found in hooks/ is in .git/hooks, otherwise your .ork files will be weird**
 
 [![README Updated](https://github.com/icl-rocketry/art-designs/actions/workflows/readme_updater.yml/badge.svg)](https://github.com/icl-rocketry/art-designs/actions/workflows/readme_updater.yml)
 
@@ -40,7 +40,7 @@ Flights:
 **Max acceleration:** 213.15 m/s^2 <br/> 
 **Flight duration:** 20.42 s <br/> 
 **Ground hit velocity:** Error parsing simulation data m/s <br/> 
-**Dry mass:** 0.984 kg               
+**Dry mass:** 0.984 kg                
 
 <!-- APEX Info End -->
 
@@ -58,7 +58,7 @@ L-class motor, apogee ~ 5890m (record: 5716m)
 **Max acceleration:** 239.58 m/s^2 <br/> 
 **Flight duration:** 28.49 s <br/> 
 **Ground hit velocity:** Error parsing simulation data m/s <br/> 
-**Dry mass:** 0.2 kg    
+**Dry mass:** 0.2 kg     
 
 <!-- ASCENSION Info End -->
 

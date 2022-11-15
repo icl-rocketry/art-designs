@@ -1,0 +1,16 @@
+#!/bin/bash
+
+changed_files=$(git diff --cached --name-only --diff-filter=ACM)
+
+for filename in $changed_files
+do 
+	if [[ $filename == *.ork ]]
+	then
+		unzipped=$(unzip -p $filename 2>&1)
+		if [[ $? == 0 ]]
+		then
+			echo "$unzipped" > $filename 
+			git add $filename
+		fi
+	fi
+done
