@@ -21,7 +21,7 @@ ART's second flight, demonstrating APEX Recovery systems
 G-Class motor
 Flight on Sunday 13th June 2021 at MRC; 523m apogee. Mostly successful.
 
-## APEX
+## APEX I
 
 ART's first record attempt
 
@@ -44,10 +44,10 @@ Flights:
 
 <!-- APEX Info End -->
 
-## ASCENSION
+## APEX K
 ART's even higher record attempt
 
-L-class motor, apogee ~ 5890m (record: 5716m)
+K-class motor, apogee ~ 6000m (record: 5932m)
 
 ### Simulation Data
 <!-- ASCENSION Info Start -->
