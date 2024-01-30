@@ -119,10 +119,10 @@
       <SustainerCG>46.87</SustainerCG>
       <SustainerIgnitionDelay>15</SustainerIgnitionDelay>
       <Booster1Engine>N1560-WH-MB-P  (CTI)</Booster1Engine>
-      <Booster1LaunchWt>66.6</Booster1LaunchWt>
+      <Booster1LaunchWt>64.4</Booster1LaunchWt>
       <Booster1SeparationDelay>0</Booster1SeparationDelay>
       <Booster1IgnitionDelay>0</Booster1IgnitionDelay>
-      <Booster1CG>93.01</Booster1CG>
+      <Booster1CG>92.21</Booster1CG>
       <Booster1NozzleDiameter>1.75</Booster1NozzleDiameter>
       <IncludeBooster1>True</IncludeBooster1>
       <Booster2LaunchWt>0</Booster2LaunchWt>
@@ -131,9 +131,9 @@
       <Booster2NozzleDiameter>0</Booster2NozzleDiameter>
       <IncludeBooster2>False</IncludeBooster2>
       <FlightTime>0</FlightTime>
-      <TimetoApogee>107.9725</TimetoApogee>
-      <MaxAltitude>140452.9</MaxAltitude>
-      <MaxVelocity>3723.598</MaxVelocity>
+      <TimetoApogee>110.0029</TimetoApogee>
+      <MaxAltitude>146067.4</MaxAltitude>
+      <MaxVelocity>3750.65</MaxVelocity>
       <OptimumWt>0</OptimumWt>
       <OptimumMaxAlt>0</OptimumMaxAlt>
     </Simulation>
