@@ -58,7 +58,7 @@ K-class motor, apogee ~ 6000m (record: 5932m)
 **Max acceleration:** 239.58 m/s^2 <br/> 
 **Flight duration:** 28.49 s <br/> 
 **Ground hit velocity:** Error parsing simulation data m/s <br/> 
-**Dry mass:** 0.2 kg                 
+**Dry mass:** 0.2 kg                  
 
 <!-- ASCENSION Info End -->
 
