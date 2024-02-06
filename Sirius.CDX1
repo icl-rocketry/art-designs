@@ -28,7 +28,7 @@
       <Fin>
         <Count>4</Count>
         <Chord>3.93</Chord>
-        <Span>3.35</Span>
+        <Span>3</Span>
         <SweepDistance>4.5</SweepDistance>
         <TipChord>2.2</TipChord>
         <Thickness>0.118</Thickness>
@@ -66,7 +66,7 @@
       <Fin>
         <Count>4</Count>
         <Chord>5.906</Chord>
-        <Span>3.3</Span>
+        <Span>3.1</Span>
         <SweepDistance>3.94</SweepDistance>
         <TipChord>1.969</TipChord>
         <Thickness>0.118</Thickness>
@@ -114,15 +114,15 @@
   <SimulationList>
     <Simulation>
       <SustainerEngine>M2045-BS  (CTI)</SustainerEngine>
-      <SustainerLaunchWt>19.36</SustainerLaunchWt>
+      <SustainerLaunchWt>19.3</SustainerLaunchWt>
       <SustainerNozzleDiameter>1.23</SustainerNozzleDiameter>
-      <SustainerCG>44.49</SustainerCG>
+      <SustainerCG>44.48</SustainerCG>
       <SustainerIgnitionDelay>15</SustainerIgnitionDelay>
-      <Booster1Engine>N2540-GR-P  (CTI)</Booster1Engine>
-      <Booster1LaunchWt>65.43</Booster1LaunchWt>
+      <Booster1Engine>N1560-WH-MB-P  (CTI)</Booster1Engine>
+      <Booster1LaunchWt>64.3</Booster1LaunchWt>
       <Booster1SeparationDelay>0</Booster1SeparationDelay>
       <Booster1IgnitionDelay>0</Booster1IgnitionDelay>
-      <Booster1CG>90.16</Booster1CG>
+      <Booster1CG>89.63</Booster1CG>
       <Booster1NozzleDiameter>1.75</Booster1NozzleDiameter>
       <IncludeBooster1>True</IncludeBooster1>
       <Booster2LaunchWt>0</Booster2LaunchWt>
@@ -131,9 +131,34 @@
       <Booster2NozzleDiameter>0</Booster2NozzleDiameter>
       <IncludeBooster2>False</IncludeBooster2>
       <FlightTime>0</FlightTime>
-      <TimetoApogee>111.4139</TimetoApogee>
-      <MaxAltitude>158752</MaxAltitude>
-      <MaxVelocity>3889</MaxVelocity>
+      <TimetoApogee>113.5037</TimetoApogee>
+      <MaxAltitude>155494.2</MaxAltitude>
+      <MaxVelocity>3815.352</MaxVelocity>
+      <OptimumWt>0</OptimumWt>
+      <OptimumMaxAlt>0</OptimumMaxAlt>
+    </Simulation>
+    <Simulation>
+      <SustainerEngine>M2045-BS  (CTI)</SustainerEngine>
+      <SustainerLaunchWt>44.48</SustainerLaunchWt>
+      <SustainerNozzleDiameter>1.23</SustainerNozzleDiameter>
+      <SustainerCG>19.3</SustainerCG>
+      <SustainerIgnitionDelay>15</SustainerIgnitionDelay>
+      <Booster1Engine>O3400-IM-P  (CTI)</Booster1Engine>
+      <Booster1LaunchWt>66.5</Booster1LaunchWt>
+      <Booster1SeparationDelay>0</Booster1SeparationDelay>
+      <Booster1IgnitionDelay>0</Booster1IgnitionDelay>
+      <Booster1CG>90.43</Booster1CG>
+      <Booster1NozzleDiameter>1.75</Booster1NozzleDiameter>
+      <IncludeBooster1>True</IncludeBooster1>
+      <Booster2LaunchWt>0</Booster2LaunchWt>
+      <Booster2Delay>0</Booster2Delay>
+      <Booster2CG>0</Booster2CG>
+      <Booster2NozzleDiameter>0</Booster2NozzleDiameter>
+      <IncludeBooster2>False</IncludeBooster2>
+      <FlightTime>0</FlightTime>
+      <TimetoApogee>92.91013</TimetoApogee>
+      <MaxAltitude>116196</MaxAltitude>
+      <MaxVelocity>2406.852</MaxVelocity>
       <OptimumWt>0</OptimumWt>
       <OptimumMaxAlt>0</OptimumMaxAlt>
     </Simulation>
