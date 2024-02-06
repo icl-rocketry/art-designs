@@ -27,13 +27,13 @@
       <Overhang>0</Overhang>
       <Fin>
         <Count>4</Count>
-        <Chord>3.93</Chord>
-        <Span>3</Span>
-        <SweepDistance>4.5</SweepDistance>
+        <Chord>3.2</Chord>
+        <Span>3.75</Span>
+        <SweepDistance>2</SweepDistance>
         <TipChord>2.2</TipChord>
-        <Thickness>0.118</Thickness>
+        <Thickness>0.1969</Thickness>
         <LERadius>0.01</LERadius>
-        <Location>3.93</Location>
+        <Location>4.2</Location>
         <AirfoilSection>Hexagonal</AirfoilSection>
         <FX1>1</FX1>
         <FX3>1</FX3>
@@ -66,10 +66,10 @@
       <Fin>
         <Count>4</Count>
         <Chord>5.906</Chord>
-        <Span>3.1</Span>
+        <Span>3.5</Span>
         <SweepDistance>3.94</SweepDistance>
         <TipChord>1.969</TipChord>
-        <Thickness>0.118</Thickness>
+        <Thickness>0.1969</Thickness>
         <LERadius>0.01</LERadius>
         <Location>5.906</Location>
         <AirfoilSection>Hexagonal</AirfoilSection>
@@ -116,38 +116,13 @@
       <SustainerEngine>M2045-BS  (CTI)</SustainerEngine>
       <SustainerLaunchWt>19.3</SustainerLaunchWt>
       <SustainerNozzleDiameter>1.23</SustainerNozzleDiameter>
-      <SustainerCG>44.48</SustainerCG>
-      <SustainerIgnitionDelay>15</SustainerIgnitionDelay>
-      <Booster1Engine>N1560-WH-MB-P  (CTI)</Booster1Engine>
-      <Booster1LaunchWt>64.3</Booster1LaunchWt>
-      <Booster1SeparationDelay>0</Booster1SeparationDelay>
-      <Booster1IgnitionDelay>0</Booster1IgnitionDelay>
-      <Booster1CG>89.63</Booster1CG>
-      <Booster1NozzleDiameter>1.75</Booster1NozzleDiameter>
-      <IncludeBooster1>True</IncludeBooster1>
-      <Booster2LaunchWt>0</Booster2LaunchWt>
-      <Booster2Delay>0</Booster2Delay>
-      <Booster2CG>0</Booster2CG>
-      <Booster2NozzleDiameter>0</Booster2NozzleDiameter>
-      <IncludeBooster2>False</IncludeBooster2>
-      <FlightTime>0</FlightTime>
-      <TimetoApogee>113.5037</TimetoApogee>
-      <MaxAltitude>155494.2</MaxAltitude>
-      <MaxVelocity>3815.352</MaxVelocity>
-      <OptimumWt>0</OptimumWt>
-      <OptimumMaxAlt>0</OptimumMaxAlt>
-    </Simulation>
-    <Simulation>
-      <SustainerEngine>M2045-BS  (CTI)</SustainerEngine>
-      <SustainerLaunchWt>44.48</SustainerLaunchWt>
-      <SustainerNozzleDiameter>1.23</SustainerNozzleDiameter>
-      <SustainerCG>19.3</SustainerCG>
+      <SustainerCG>44.8</SustainerCG>
       <SustainerIgnitionDelay>15</SustainerIgnitionDelay>
       <Booster1Engine>O3400-IM-P  (CTI)</Booster1Engine>
-      <Booster1LaunchWt>66.5</Booster1LaunchWt>
+      <Booster1LaunchWt>66.8</Booster1LaunchWt>
       <Booster1SeparationDelay>0</Booster1SeparationDelay>
       <Booster1IgnitionDelay>0</Booster1IgnitionDelay>
-      <Booster1CG>90.43</Booster1CG>
+      <Booster1CG>90.53</Booster1CG>
       <Booster1NozzleDiameter>1.75</Booster1NozzleDiameter>
       <IncludeBooster1>True</IncludeBooster1>
       <Booster2LaunchWt>0</Booster2LaunchWt>
@@ -156,9 +131,9 @@
       <Booster2NozzleDiameter>0</Booster2NozzleDiameter>
       <IncludeBooster2>False</IncludeBooster2>
       <FlightTime>0</FlightTime>
-      <TimetoApogee>92.91013</TimetoApogee>
-      <MaxAltitude>116196</MaxAltitude>
-      <MaxVelocity>2406.852</MaxVelocity>
+      <TimetoApogee>104.4326</TimetoApogee>
+      <MaxAltitude>145543.7</MaxAltitude>
+      <MaxVelocity>3845.496</MaxVelocity>
       <OptimumWt>0</OptimumWt>
       <OptimumMaxAlt>0</OptimumMaxAlt>
     </Simulation>
