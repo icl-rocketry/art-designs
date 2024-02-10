@@ -94,7 +94,7 @@
     <RodAngle>0</RodAngle>
     <RodLength>20</RodLength>
     <Temperature>74</Temperature>
-    <WindSpeed>0</WindSpeed>
+    <WindSpeed>22</WindSpeed>
   </LaunchSite>
   <Recovery>
     <Altitude1>1000</Altitude1>
@@ -103,12 +103,12 @@
     <DeviceType2>Parachute</DeviceType2>
     <Event1>True</Event1>
     <Event2>True</Event2>
-    <Size1>1</Size1>
-    <Size2>1</Size2>
+    <Size1>9</Size1>
+    <Size2>40</Size2>
     <EventType1>Apogee</EventType1>
     <EventType2>Altitude</EventType2>
-    <CD1>0</CD1>
-    <CD2>2.1</CD2>
+    <CD1>1.75</CD1>
+    <CD2>2.2</CD2>
   </Recovery>
   <MachAlt />
   <SimulationList>
@@ -131,9 +131,9 @@
       <Booster2NozzleDiameter>0</Booster2NozzleDiameter>
       <IncludeBooster2>False</IncludeBooster2>
       <FlightTime>0</FlightTime>
-      <TimetoApogee>116.4452</TimetoApogee>
-      <MaxAltitude>176835.9</MaxAltitude>
-      <MaxVelocity>3790.713</MaxVelocity>
+      <TimetoApogee>113.2845</TimetoApogee>
+      <MaxAltitude>169488.1</MaxAltitude>
+      <MaxVelocity>3791.846</MaxVelocity>
       <OptimumWt>0</OptimumWt>
       <OptimumMaxAlt>0</OptimumMaxAlt>
     </Simulation>
