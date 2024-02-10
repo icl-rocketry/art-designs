@@ -94,7 +94,7 @@
     <RodAngle>0</RodAngle>
     <RodLength>20</RodLength>
     <Temperature>74</Temperature>
-    <WindSpeed>22</WindSpeed>
+    <WindSpeed>0</WindSpeed>
   </LaunchSite>
   <Recovery>
     <Altitude1>1000</Altitude1>
