@@ -28,7 +28,7 @@
       <Fin>
         <Count>4</Count>
         <Chord>4.75</Chord>
-        <Span>3.25</Span>
+        <Span>3.4</Span>
         <SweepDistance>3.575</SweepDistance>
         <TipChord>2.2</TipChord>
         <Thickness>0.165</Thickness>
@@ -66,7 +66,7 @@
       <Fin>
         <Count>4</Count>
         <Chord>5.906</Chord>
-        <Span>4.1</Span>
+        <Span>4.25</Span>
         <SweepDistance>3.7</SweepDistance>
         <TipChord>2.2</TipChord>
         <Thickness>0.165</Thickness>
@@ -114,16 +114,16 @@
   <SimulationList>
     <Simulation>
       <SustainerEngine>M2045-BS  (CTI)</SustainerEngine>
-      <SustainerLaunchWt>20.7</SustainerLaunchWt>
-      <SustainerNozzleDiameter>1.23</SustainerNozzleDiameter>
-      <SustainerCG>44.46</SustainerCG>
+      <SustainerLaunchWt>20.5</SustainerLaunchWt>
+      <SustainerNozzleDiameter>1.875</SustainerNozzleDiameter>
+      <SustainerCG>44</SustainerCG>
       <SustainerIgnitionDelay>15</SustainerIgnitionDelay>
       <Booster1Engine>O3400-IM-P  (CTI)</Booster1Engine>
-      <Booster1LaunchWt>68.3</Booster1LaunchWt>
+      <Booster1LaunchWt>68.1</Booster1LaunchWt>
       <Booster1SeparationDelay>0</Booster1SeparationDelay>
       <Booster1IgnitionDelay>0</Booster1IgnitionDelay>
-      <Booster1CG>91.6</Booster1CG>
-      <Booster1NozzleDiameter>1.75</Booster1NozzleDiameter>
+      <Booster1CG>91.61</Booster1CG>
+      <Booster1NozzleDiameter>2.7</Booster1NozzleDiameter>
       <IncludeBooster1>True</IncludeBooster1>
       <Booster2LaunchWt>0</Booster2LaunchWt>
       <Booster2Delay>0</Booster2Delay>
@@ -131,9 +131,9 @@
       <Booster2NozzleDiameter>0</Booster2NozzleDiameter>
       <IncludeBooster2>False</IncludeBooster2>
       <FlightTime>0</FlightTime>
-      <TimetoApogee>113.2845</TimetoApogee>
-      <MaxAltitude>169488.1</MaxAltitude>
-      <MaxVelocity>3791.846</MaxVelocity>
+      <TimetoApogee>123.0566</TimetoApogee>
+      <MaxAltitude>197118</MaxAltitude>
+      <MaxVelocity>3985.021</MaxVelocity>
       <OptimumWt>0</OptimumWt>
       <OptimumMaxAlt>0</OptimumMaxAlt>
     </Simulation>
