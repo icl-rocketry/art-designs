@@ -104,7 +104,7 @@
     <Event1>True</Event1>
     <Event2>True</Event2>
     <Size1>9</Size1>
-    <Size2>40</Size2>
+    <Size2>36</Size2>
     <EventType1>Apogee</EventType1>
     <EventType2>Altitude</EventType2>
     <CD1>1.75</CD1>
