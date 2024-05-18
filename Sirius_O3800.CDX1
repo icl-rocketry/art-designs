@@ -24,19 +24,19 @@
       <BoattailLength>3.543</BoattailLength>
       <BoattailRearDiameter>3.1</BoattailRearDiameter>
       <BoattailOffset>0</BoattailOffset>
-      <Overhang>0.3940001</Overhang>
+      <Overhang>0.3000002</Overhang>
       <Fin>
         <Count>4</Count>
         <Chord>4.75</Chord>
         <Span>3.25</Span>
         <SweepDistance>3.575</SweepDistance>
         <TipChord>2.2</TipChord>
-        <Thickness>0.165</Thickness>
+        <Thickness>0.205</Thickness>
         <LERadius>0.01</LERadius>
-        <Location>4.356</Location>
+        <Location>4.45</Location>
         <AirfoilSection>Hexagonal</AirfoilSection>
-        <FX1>1</FX1>
-        <FX3>1</FX3>
+        <FX1>0.826</FX1>
+        <FX3>0.826</FX3>
       </Fin>
       <Protuberance>
         <StreamlinedNoBaseDrag>0</StreamlinedNoBaseDrag>
@@ -60,8 +60,8 @@
       <Length>70.866</Length>
       <Diameter>4.055</Diameter>
       <InsideDiameter>3.11</InsideDiameter>
-      <LaunchLugDiameter>0</LaunchLugDiameter>
-      <LaunchLugLength>0</LaunchLugLength>
+      <LaunchLugDiameter>0.6</LaunchLugDiameter>
+      <LaunchLugLength>0.6</LaunchLugLength>
       <RailGuideDiameter>0</RailGuideDiameter>
       <RailGuideHeight>0</RailGuideHeight>
       <LaunchShoeArea>0</LaunchShoeArea>
@@ -77,12 +77,12 @@
         <Span>4.5</Span>
         <SweepDistance>4</SweepDistance>
         <TipChord>3</TipChord>
-        <Thickness>0.165</Thickness>
+        <Thickness>0.205</Thickness>
         <LERadius>0.01</LERadius>
         <Location>7</Location>
         <AirfoilSection>Hexagonal</AirfoilSection>
-        <FX1>1</FX1>
-        <FX3>1</FX3>
+        <FX1>1.063</FX1>
+        <FX3>1.063</FX3>
       </Fin>
       <Protuberance>
         <StreamlinedNoBaseDrag>0</StreamlinedNoBaseDrag>
@@ -110,7 +110,7 @@
     <RodAngle>0</RodAngle>
     <RodLength>20</RodLength>
     <Temperature>74</Temperature>
-    <WindSpeed>0</WindSpeed>
+    <WindSpeed>20</WindSpeed>
   </LaunchSite>
   <Recovery>
     <Altitude1>1000</Altitude1>
@@ -147,9 +147,9 @@
       <Booster2NozzleDiameter>0</Booster2NozzleDiameter>
       <IncludeBooster2>False</IncludeBooster2>
       <FlightTime>0</FlightTime>
-      <TimetoApogee>117.8056</TimetoApogee>
-      <MaxAltitude>183183.7</MaxAltitude>
-      <MaxVelocity>3863.489</MaxVelocity>
+      <TimetoApogee>105.0329</TimetoApogee>
+      <MaxAltitude>148005.4</MaxAltitude>
+      <MaxVelocity>3726.543</MaxVelocity>
       <OptimumWt>0</OptimumWt>
       <OptimumMaxAlt>0</OptimumMaxAlt>
     </Simulation>
