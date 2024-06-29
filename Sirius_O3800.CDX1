@@ -117,8 +117,8 @@
     <Altitude2>1700</Altitude2>
     <DeviceType1>Parachute</DeviceType1>
     <DeviceType2>Parachute</DeviceType2>
-    <Event1>False</Event1>
-    <Event2>False</Event2>
+    <Event1>True</Event1>
+    <Event2>True</Event2>
     <Size1>9</Size1>
     <Size2>36</Size2>
     <EventType1>Apogee</EventType1>
@@ -198,8 +198,8 @@
       <IncludeBooster2>False</IncludeBooster2>
       <FlightTime>0</FlightTime>
       <TimetoApogee>38.73951</TimetoApogee>
-      <MaxAltitude>7.957487</MaxAltitude>
-      <MaxVelocity>819.018</MaxVelocity>
+      <MaxAltitude>29765.04</MaxAltitude>
+      <MaxVelocity>115.1508</MaxVelocity>
       <OptimumWt>0</OptimumWt>
       <OptimumMaxAlt>0</OptimumMaxAlt>
     </Simulation>
